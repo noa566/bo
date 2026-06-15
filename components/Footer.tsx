@@ -31,7 +31,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="font-serif text-lg mb-4 text-sand-50">Menu</h4>
+          <h4 className="font-sans text-xs uppercase tracking-widest font-semibold mb-4 text-sand-50">Menu</h4>
           <ul className="space-y-2 text-sm">
             {navItems.map((item) => (
               <li key={item.href}>
@@ -47,7 +47,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="font-serif text-lg mb-4 text-sand-50">Contact</h4>
+          <h4 className="font-sans text-xs uppercase tracking-widest font-semibold mb-4 text-sand-50">Contact</h4>
           <ul className="space-y-2 text-sm text-sand-50/90">
             <li>
               <a

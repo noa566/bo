@@ -51,7 +51,7 @@ export default function ContactForm() {
             />
           </svg>
         </div>
-        <h3 className="font-serif text-2xl font-medium mb-3">
+        <h3 className="font-sans text-xl md:text-2xl font-semibold tracking-tight mb-3">
           Merci pour votre message !
         </h3>
         <p className="body-text max-w-md mx-auto">

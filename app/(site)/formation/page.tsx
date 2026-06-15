@@ -65,7 +65,7 @@ export default async function FormationPage() {
                   <div className={`font-serif text-3xl mb-3 ${c2.number}`}>
                     0{i + 1}
                   </div>
-                  <h3 className="font-serif text-xl font-medium mb-3">
+                  <h3 className="font-sans text-lg md:text-xl font-semibold tracking-tight mb-3">
                     {e.title}
                   </h3>
                   <p className="body-text text-[15px]">{e.text}</p>
@@ -107,7 +107,7 @@ export default async function FormationPage() {
                     0{i + 1}
                   </span>
                   <div>
-                    <h3 className="font-serif text-lg font-medium mb-2">
+                    <h3 className="font-sans text-base md:text-lg font-semibold tracking-tight mb-2">
                       {a.title}
                     </h3>
                     <p className="body-text text-[15px]">{a.text}</p>

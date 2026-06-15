@@ -57,13 +57,13 @@ export default async function CoachPage() {
         <div className="container-prose grid md:grid-cols-2 gap-10">
           <Reveal variant="left">
             <span className="eyebrow">{c.conviction.eyebrow}</span>
-            <p className="font-serif text-xl md:text-2xl leading-snug mt-4 text-balance">
+            <p className="font-sans text-xl md:text-2xl font-medium leading-snug tracking-tight mt-4 text-balance">
               {c.conviction.text}
             </p>
           </Reveal>
           <Reveal variant="right" delay={120}>
             <span className="eyebrow">{c.engagement.eyebrow}</span>
-            <p className="font-serif text-xl md:text-2xl leading-snug mt-4 text-balance">
+            <p className="font-sans text-xl md:text-2xl font-medium leading-snug tracking-tight mt-4 text-balance">
               {c.engagement.text}
             </p>
           </Reveal>

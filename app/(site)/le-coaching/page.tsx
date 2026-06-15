@@ -43,10 +43,10 @@ export default async function LeCoachingPage() {
               <li
                 className="rounded-2xl border border-sand-200 bg-sand-50 p-6 transition-all duration-300 hover:border-bo/40 hover:shadow-lg hover:-translate-y-0.5 h-full"
               >
-                <span className="font-serif text-xs text-bo-dark">
+                <span className="font-serif text-base text-bo-dark">
                   0{i + 1}
                 </span>
-                <h3 className="font-serif text-lg font-medium mt-2 mb-2">
+                <h3 className="font-sans text-base md:text-lg font-semibold tracking-tight mt-2 mb-2">
                   {d.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-ink-soft italic">
@@ -94,7 +94,7 @@ export default async function LeCoachingPage() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-serif text-xl mb-2">{step.title}</h3>
+                    <h3 className="font-sans text-lg md:text-xl font-semibold tracking-tight mb-2">{step.title}</h3>
                     <p className="body-text">{step.text}</p>
                   </div>
                 </li>

@@ -42,7 +42,7 @@ export default async function TarifsPage() {
                 )}
 
                 <h2
-                  className={`font-serif text-2xl font-medium leading-snug ${
+                  className={`font-sans text-xl md:text-2xl font-semibold leading-snug tracking-tight ${
                     p.highlight ? "text-sand-50" : "text-ink"
                   }`}
                 >
@@ -73,7 +73,7 @@ export default async function TarifsPage() {
                         {o.label}
                       </p>
                       <p
-                        className={`font-serif text-2xl mt-1 ${
+                        className={`font-sans text-2xl font-semibold tracking-tight mt-1 ${
                           p.highlight ? "text-sand-50" : "text-bo-dark"
                         }`}
                       >
@@ -105,7 +105,7 @@ export default async function TarifsPage() {
             className="mt-10 max-w-2xl mx-auto rounded-2xl bg-accent-100/50 border border-accent-200 p-7 text-center transition-all hover:shadow-lg hover:border-accent-300"
             as="div"
           >
-            <h3 className="font-serif text-xl font-medium mb-3">
+            <h3 className="font-sans text-lg md:text-xl font-semibold tracking-tight mb-3">
               {c.founding.title}
             </h3>
             <p className="body-text">{c.founding.text}</p>

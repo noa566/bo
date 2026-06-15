@@ -14,7 +14,7 @@
   }
 
   h1, h2, h3, h4, h5 {
-    @apply font-serif text-ink;
+    @apply font-sans text-ink tracking-tight;
   }
 }
 
@@ -32,19 +32,21 @@
   }
 
   .eyebrow {
-    @apply inline-block text-xs uppercase tracking-widest text-bo-dark font-medium;
+    @apply inline-block text-xs uppercase tracking-widest text-bo-dark font-semibold;
   }
 
+  /* Titre principal — seul endroit où on garde le serif élégant */
   .h-display {
     @apply font-serif text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.1] tracking-tight;
   }
 
+  /* Tous les autres titres en sans-serif (Inter) */
   .h-section {
-    @apply font-serif text-3xl md:text-4xl font-medium leading-tight tracking-tight;
+    @apply font-sans text-3xl md:text-4xl font-semibold leading-tight tracking-tight;
   }
 
   .h-sub {
-    @apply font-serif text-2xl md:text-3xl font-medium leading-snug;
+    @apply font-sans text-xl md:text-2xl font-semibold leading-snug tracking-tight;
   }
 
   .lead {

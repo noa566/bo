@@ -84,20 +84,7 @@ export default async function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative -mt-24 pt-24 overflow-hidden bg-gradient-to-b from-sand-100 via-sand-50 to-sand-50">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -top-10 -left-20 h-72 w-72 rounded-full bg-bo/20 halo animate-float-slow"
-        />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute top-1/3 -right-24 h-80 w-80 rounded-full bg-accent-200/40 halo animate-float"
-        />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute bottom-10 left-1/3 h-40 w-40 rounded-full bg-joy-200/50 halo animate-pulse-soft"
-        />
-
+      <section className="relative -mt-24 pt-24 bg-gradient-to-b from-sand-100/70 via-sand-50/50 to-transparent">
         <div className="container-full grid lg:grid-cols-2 gap-10 lg:gap-14 items-center py-10 md:py-16 relative">
           <div className="animate-fade-in-up">
             <span className="eyebrow mb-5">{content.hero.eyebrow}</span>
@@ -202,7 +189,7 @@ export default async function HomePage() {
       <section className="py-14 md:py-20">
         <Reveal variant="up" className="container-prose text-center" as="div">
           <span className="eyebrow">{content.philosophy.eyebrow}</span>
-          <p className="font-serif text-2xl md:text-3xl leading-relaxed mt-5 text-balance text-ink">
+          <p className="font-serif italic text-2xl md:text-3xl leading-relaxed mt-5 text-balance text-ink">
             {content.philosophy.quote}
           </p>
           <p className="text-sm text-ink-muted mt-4 italic">
@@ -327,7 +314,7 @@ export default async function HomePage() {
               aria-hidden
               className="pointer-events-none absolute -bottom-12 -left-12 h-56 w-56 rounded-full bg-accent-400/20 halo animate-float-slow"
             />
-            <h2 className="relative font-serif text-3xl md:text-4xl font-medium leading-tight text-balance">
+            <h2 className="relative font-sans text-3xl md:text-4xl font-semibold leading-tight tracking-tight text-balance">
               {content.finalCta.title}
             </h2>
             <p className="relative mt-4 text-sand-50/90 max-w-xl mx-auto text-balance">

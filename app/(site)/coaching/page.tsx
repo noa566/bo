@@ -57,7 +57,7 @@ export default async function CoachingPage() {
                   </span>
                   <div className="h-px flex-1 bg-sand-200" />
                 </div>
-                <h2 className="font-serif text-2xl md:text-[26px] font-medium mt-2 mb-2 leading-snug">
+                <h2 className="font-sans text-2xl md:text-[26px] font-semibold tracking-tight mt-2 mb-2 leading-snug">
                   {o.title}
                 </h2>
                 <p className="text-sm uppercase tracking-wider text-bo-dark/80 mb-5">

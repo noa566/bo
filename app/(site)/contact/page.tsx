@@ -34,7 +34,7 @@ export default async function ContactPage() {
 
           <aside className="order-1 lg:order-2 lg:sticky lg:top-32 space-y-6">
             <div className="rounded-3xl bg-gradient-to-br from-bo to-bo-dark p-7 md:p-8 text-sand-50">
-              <h3 className="font-serif text-2xl mb-5">{c.details.title}</h3>
+              <h3 className="font-sans text-xl md:text-2xl font-semibold tracking-tight mb-5">{c.details.title}</h3>
 
               <div className="space-y-4">
                 <a
@@ -141,7 +141,7 @@ export default async function ContactPage() {
             </div>
 
             <div className="rounded-3xl bg-accent-100/50 border border-accent-200 p-7">
-              <h3 className="font-serif text-xl mb-3">{c.workInfo.title}</h3>
+              <h3 className="font-sans text-lg md:text-xl font-semibold tracking-tight mb-3">{c.workInfo.title}</h3>
               <ul className="space-y-2 text-sm text-ink-soft leading-relaxed">
                 {c.workInfo.items.map((item, i) => (
                   <li key={i}>· {item}</li>
