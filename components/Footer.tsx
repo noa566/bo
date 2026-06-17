@@ -54,7 +54,7 @@ export default function Footer() {
                 href="mailto:lazzarotto.coaching@gmail.com"
                 className="hover:underline underline-offset-4"
               >
-                lazzarotto.coaching (at) gmail.com
+                lazzarotto.coaching@gmail.com
               </a>
             </li>
             <li>

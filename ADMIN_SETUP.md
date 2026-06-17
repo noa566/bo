@@ -51,7 +51,7 @@ git-ignoré donc il ne sera pas poussé sur GitHub.
 1. Vercel Dashboard → ton projet → **Settings** → **Environment Variables**.
 2. Ajoute **chacune** des variables présentes dans `.env.example` :
    - `NEXT_PUBLIC_FIREBASE_API_KEY`
-   - `NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN`
+   - `NEXT_PUBLIC_FIREBASxE_AUTH_DOMAIN`
    - `NEXT_PUBLIC_FIREBASE_PROJECT_ID`
    - `NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET`
    - `NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID`
@@ -87,6 +87,35 @@ Sur `/admin` :
 Bouton **Restaurer les valeurs par défaut** en haut → remplit les champs avec
 le contenu d'origine du code. **N'enregistre pas tant que tu n'as pas cliqué
 "Enregistrer"** — tu peux revenir en arrière en rafraîchissant la page.
+
+---
+
+## Formulaire de contact (Resend)
+
+Quand un visiteur envoie le formulaire sur `/contact`, un email est envoyé à Boris via [Resend](https://resend.com).
+
+### Variables d'environnement
+
+Ajoute ces variables dans **`.env.local`** (local) et dans **Vercel → Settings → Environment Variables** (production) :
+
+| Variable | Exemple | Description |
+|---|---|---|
+| `RESEND_API_KEY` | `re_...` | Clé API depuis [resend.com/api-keys](https://resend.com/api-keys) |
+| `CONTACT_TO_EMAIL` | `lazzarotto.coaching@gmail.com` | Email qui reçoit les demandes |
+| `RESEND_FROM_EMAIL` | `Bo Coaching <onboarding@resend.dev>` | Expéditeur (voir ci-dessous) |
+
+### Mode test vs production
+
+- **Sans domaine vérifié** : utilise `Bo Coaching <onboarding@resend.dev>` comme expéditeur. Resend n'autorise alors l'envoi **que vers l'email du compte Resend** (pour les tests).
+- **En production** : vérifie ton domaine dans Resend (ex. `bothecoach.ch`), puis mets par exemple `Bo Coaching <contact@bothecoach.ch>` dans `RESEND_FROM_EMAIL`.
+
+Le champ **Reply-To** est automatiquement l'email du client : Boris peut répondre directement depuis sa boîte mail.
+
+### Test rapide
+
+1. Redémarre le serveur local après avoir ajouté les variables (`npm run dev`).
+2. Va sur `/contact`, remplis le formulaire et envoie.
+3. Vérifie la boîte `CONTACT_TO_EMAIL` (et les spams).
 
 ---
 

@@ -314,7 +314,7 @@ export default async function HomePage() {
               aria-hidden
               className="pointer-events-none absolute -bottom-12 -left-12 h-56 w-56 rounded-full bg-accent-400/20 halo animate-float-slow"
             />
-            <h2 className="relative font-sans text-3xl md:text-4xl font-semibold leading-tight tracking-tight text-balance">
+            <h2 className="relative font-sans text-3xl md:text-4xl font-semibold leading-tight tracking-tight text-balance text-sand-50">
               {content.finalCta.title}
             </h2>
             <p className="relative mt-4 text-sand-50/90 max-w-xl mx-auto text-balance">

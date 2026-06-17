@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
@@ -24,16 +25,32 @@ export default async function LeCoachingPage() {
         subtitle={c.header.subtitle}
       />
 
-      <section className="py-10 md:py-14">
+      <section className="py-8 md:py-10">
         <div className="container-prose">
-          <span className="eyebrow">{c.whatIs.eyebrow}</span>
-          <p className="body-text mt-3">{c.whatIs.text}</p>
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <Reveal variant="left">
+              <span className="eyebrow">{c.whatIs.eyebrow}</span>
+              <p className="body-text mt-3">{c.whatIs.text}</p>
+            </Reveal>
+            <Reveal variant="right" className="hidden lg:block">
+              <div className="relative">
+                <div className="absolute -inset-4 bg-accent-100/40 rounded-[2.5rem] blur-2xl" />
+                <Image
+                  src="/illustrations/coaching-journey.png"
+                  alt="Illustration d'une personne sur un chemin vers le soleil levant"
+                  width={1536}
+                  height={1024}
+                  className="relative rounded-[2rem] w-full h-auto shadow-lg border border-sand-200"
+                />
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-white border-y border-sand-200">
+      <section className="py-10 md:py-12 bg-white border-y border-sand-200">
         <div className="container-prose">
-          <div className="text-center mb-10">
+          <div className="text-center mb-8">
             <span className="eyebrow">{c.domains.eyebrow}</span>
             <h2 className="h-section mt-3 text-balance">{c.domains.title}</h2>
           </div>
@@ -59,7 +76,7 @@ export default async function LeCoachingPage() {
         </div>
       </section>
 
-      <section className="py-10 md:py-14">
+      <section className="py-8 md:py-10">
         <div className="container-prose">
           <span className="eyebrow">{c.deontology.eyebrow}</span>
           <h2 className="h-sub mt-3 text-balance">{c.deontology.headline}</h2>
@@ -67,12 +84,12 @@ export default async function LeCoachingPage() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-accent-100/40">
+      <section className="py-10 md:py-12 bg-accent-100/40">
         <div className="container-prose">
           <span className="eyebrow">{c.process.eyebrow}</span>
           <h2 className="h-section mt-3 text-balance">{c.process.title}</h2>
 
-          <ol className="mt-8 relative space-y-8">
+          <ol className="mt-6 relative space-y-6">
             <div className="absolute left-[15px] top-2 bottom-2 w-px bg-accent-200 hidden md:block" />
 
             {c.process.steps.map((step, i) => {
@@ -105,27 +122,24 @@ export default async function LeCoachingPage() {
         </div>
       </section>
 
-      <section className="py-10 md:py-14">
+      <section className="py-10 md:py-12">
         <div className="container-prose">
           <QuoteBlock
             variant="centered"
             quote={c.quote.text}
             author={c.quote.author}
           />
-        </div>
-      </section>
-
-      <section className="py-12 md:py-16">
-        <div className="container-prose text-center">
-          <h2 className="h-section text-balance">{c.cta.title}</h2>
-          <p className="lead mt-4">{c.cta.lead}</p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link href="/contact" className="btn-primary">
-              {c.cta.primaryButton}
-            </Link>
-            <Link href="/tarifs" className="btn-secondary">
-              {c.cta.secondaryButton}
-            </Link>
+          <div className="mt-10 text-center">
+            <h2 className="h-section text-balance">{c.cta.title}</h2>
+            <p className="lead mt-4">{c.cta.lead}</p>
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              <Link href="/contact" className="btn-primary">
+                {c.cta.primaryButton}
+              </Link>
+              <Link href="/tarifs" className="btn-secondary">
+                {c.cta.secondaryButton}
+              </Link>
+            </div>
           </div>
         </div>
       </section>

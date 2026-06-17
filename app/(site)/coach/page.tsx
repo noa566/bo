@@ -28,17 +28,15 @@ export default async function CoachPage() {
       <section className="py-12 md:py-16">
         <div className="container-full grid lg:grid-cols-[1fr_1.3fr] gap-10 lg:gap-14 items-start">
           <div className="relative lg:sticky lg:top-32">
-            <div className="aspect-[4/5] rounded-[2rem] overflow-hidden bg-gradient-to-br from-accent-100 via-sand-100 to-bo/30 shadow-xl border border-sand-200 flex items-center justify-center">
-              <div className="text-center px-6">
-                <div className="mx-auto w-28 h-28 rounded-full bg-white/60 flex items-center justify-center mb-4 backdrop-blur-sm">
-                  <span className="font-serif text-4xl text-bo-dark">BL</span>
-                </div>
-                <p className="text-xs text-ink-muted italic">
-                  Remplacer par la photo de Boris
-                  <br />
-                  (public/boris.jpg)
-                </p>
-              </div>
+            <div className="aspect-[4/5] rounded-[2rem] overflow-hidden bg-sand-100 shadow-xl border border-sand-200">
+              <Image
+                src="/boris.jpg"
+                alt="Boris Lazzarotto, coach et formateur"
+                width={1024}
+                height={1024}
+                priority
+                className="h-full w-full object-cover object-top"
+              />
             </div>
           </div>
 

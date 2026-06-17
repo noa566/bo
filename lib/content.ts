@@ -173,7 +173,7 @@ export const defaultHomeContent: HomeContent = {
     titleAccent: "potentiel",
     titleEnd: ", un pas à la fois.",
     lead: "Coaching personnel, coaching d'équipe et formations pour vous accompagner dans vos transitions, clarifier vos priorités et construire l'avenir qui vous ressemble.",
-    ctaPrimary: "Séance découverte gratuite",
+    ctaPrimary: "Séance découverte",
     ctaSecondary: "Découvrir le coaching",
     stats: [
       { value: "10+", label: "Années d'expérience" },
@@ -230,7 +230,7 @@ export const defaultHomeContent: HomeContent = {
   finalCta: {
     title: "Prêt à faire le premier pas ?",
     description:
-      "La séance « fondation » est gratuite et sans engagement. C'est l'occasion de faire connaissance, de clarifier vos attentes et de répondre à vos questions.",
+      "La séance « fondation » est sans engagement. C'est l'occasion de faire connaissance, de clarifier vos attentes et de répondre à vos questions.",
     button: "Réserver ma séance découverte",
   },
 };
@@ -278,7 +278,7 @@ export const defaultCoachContent: CoachContent = {
   },
   cta: {
     title: "Envie d'échanger autour d'un projet ?",
-    lead: "La première séance est offerte, sans engagement.",
+    lead: "La première séance est sans engagement.",
     button: "Me contacter",
   },
 };
@@ -420,7 +420,7 @@ export const defaultCoachingContent: CoachingContent = {
   ],
   cta: {
     title: "Quelle orientation résonne avec vous ?",
-    lead: "Discutons-en lors d'une séance fondation, offerte et sans engagement.",
+    lead: "Discutons-en lors d'une séance fondation, sans engagement.",
     primaryButton: "Prendre rendez-vous",
     secondaryButton: "Voir les tarifs",
   },
@@ -476,7 +476,7 @@ export const defaultLeCoachingContent: LeCoachingContent = {
     steps: [
       {
         title: "La séance « fondation »",
-        text: "Nous commençons par une séance gratuite et sans engagement pour faire connaissance, vous présenter plus en détail ce qu'est le coaching, clarifier vos attentes et répondre à vos questions.",
+        text: "Nous commençons par une séance sans engagement pour faire connaissance, vous présenter plus en détail ce qu'est le coaching, clarifier vos attentes et répondre à vos questions.",
       },
       {
         title: "L'accord écrit",
@@ -494,7 +494,7 @@ export const defaultLeCoachingContent: LeCoachingContent = {
   },
   cta: {
     title: "Curieux de tester une séance ?",
-    lead: "La séance fondation est offerte. C'est l'occasion idéale pour commencer.",
+    lead: "La séance fondation est sans engagement. C'est l'occasion idéale pour commencer.",
     primaryButton: "Réserver ma séance fondation",
     secondaryButton: "Voir les tarifs",
   },
@@ -609,8 +609,8 @@ export const defaultTarifsContent: TarifsContent = {
     },
   ],
   founding: {
-    title: "Séance fondation offerte",
-    text: "Avant tout engagement, je vous propose une séance de découverte gratuite et sans engagement pour faire connaissance, clarifier vos attentes et répondre à vos questions.",
+    title: "Séance fondation",
+    text: "Avant tout engagement, je vous propose une séance de découverte sans engagement pour faire connaissance, clarifier vos attentes et répondre à vos questions.",
   },
 };
 
@@ -649,7 +649,7 @@ export const defaultTemoignagesContent: TemoignagesContent = {
   ],
   cta: {
     title: "Envie de vivre votre propre cheminement ?",
-    lead: "La première étape est une séance fondation, gratuite et sans engagement.",
+    lead: "La première étape est une séance fondation, sans engagement.",
     button: "Réserver ma séance fondation",
   },
 };
@@ -659,7 +659,7 @@ export const defaultContactContent: ContactContent = {
     eyebrow: "Contact",
     title: "Faisons connaissance",
     subtitle:
-      "La séance fondation est gratuite et sans engagement. C'est l'occasion idéale pour faire le premier pas.",
+      "La séance fondation est sans engagement. C'est l'occasion idéale pour faire le premier pas.",
   },
   form: {
     eyebrow: "Formulaire",
@@ -677,7 +677,7 @@ export const defaultContactContent: ContactContent = {
     title: "Comment je travaille",
     items: [
       "Réponse sous 24 à 48h ouvrées",
-      "Première séance fondation offerte",
+      "Première séance fondation sans engagement",
       "Confidentialité garantie",
       "En présentiel ou en visio",
     ],

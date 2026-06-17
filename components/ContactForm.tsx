@@ -137,9 +137,7 @@ export default function ContactForm() {
           defaultValue="seance-fondation"
           className="w-full rounded-xl border border-sand-300 bg-white px-4 py-3 text-base focus:border-bo focus:outline-none focus:ring-2 focus:ring-bo/20 transition-all"
         >
-          <option value="seance-fondation">
-            Séance fondation (gratuite)
-          </option>
+          <option value="seance-fondation">Séance fondation</option>
           <option value="coaching-personnel">Coaching personnel</option>
           <option value="coaching-equipe">Coaching d'équipe</option>
           <option value="formation">Formation</option>
