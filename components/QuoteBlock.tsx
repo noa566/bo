@@ -1,32 +1,57 @@
 type Props = {
   quote: string;
   author: string;
-  variant?: "default" | "centered";
+  /** Grande citation de section (défaut) ou compacte dans une carte */
+  variant?: "section" | "inline" | "centered";
+  /** Affiche l’icône guillemets (variant section uniquement) */
+  showIcon?: boolean;
 };
+
+function QuoteIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      width="36"
+      height="36"
+      viewBox="0 0 24 24"
+      className={className}
+      fill="currentColor"
+      aria-hidden
+    >
+      <path d="M9 7H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v2a2 2 0 0 1-2 2H4v2h1a4 4 0 0 0 4-4V7zm12 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v2a2 2 0 0 1-2 2h-1v2h1a4 4 0 0 0 4-4V7z" />
+    </svg>
+  );
+}
 
 export default function QuoteBlock({
   quote,
   author,
-  variant = "default",
+  variant = "section",
+  showIcon = true,
 }: Props) {
-  if (variant === "centered") {
+  const resolved = variant === "centered" ? "section" : variant;
+
+  if (resolved === "inline") {
     return (
-      <figure className="my-12 text-center">
-        <blockquote className="font-serif text-2xl md:text-3xl italic leading-relaxed text-accent-600 text-balance max-w-3xl mx-auto">
+      <figure className="quote-block">
+        <blockquote className="font-serif text-base italic leading-relaxed">
           « {quote} »
         </blockquote>
-        <figcaption className="mt-4 text-sm text-accent-500 italic">
-          {author}
-        </figcaption>
+        <figcaption className="quote-author">{author}</figcaption>
       </figure>
     );
   }
+
   return (
-    <figure className="quote-block">
-      <blockquote className="font-serif text-base italic leading-relaxed">
+    <figure className="text-center">
+      {showIcon && (
+        <QuoteIcon className="mx-auto text-accent-400 mb-4 animate-float-slow" />
+      )}
+      <blockquote className="font-serif text-2xl md:text-3xl italic leading-relaxed text-accent-700 text-balance max-w-3xl mx-auto">
         « {quote} »
       </blockquote>
-      <figcaption className="quote-author">{author}</figcaption>
+      <figcaption className="mt-4 text-sm text-accent-600 italic">
+        {author}
+      </figcaption>
     </figure>
   );
 }

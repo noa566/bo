@@ -72,9 +72,7 @@ export default async function CoachPage() {
       <section className="py-12 md:py-16">
         <div className="container-prose">
           <div className="text-center">
-            <span className="eyebrow">{c.inspiration.eyebrow}</span>
             <QuoteBlock
-              variant="centered"
               quote={c.inspiration.quote}
               author={c.inspiration.author}
             />

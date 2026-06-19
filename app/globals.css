@@ -70,7 +70,7 @@
   }
 
   .card {
-    @apply rounded-2xl border border-sand-200 bg-white p-6 md:p-7 transition-all duration-300 hover:border-bo/40 hover:shadow-xl hover:-translate-y-1;
+    @apply relative overflow-hidden rounded-2xl border border-sand-200 bg-white p-6 md:p-7 transition-all duration-300 hover:border-bo/40 hover:shadow-xl hover:-translate-y-1;
   }
 
   .quote-block {
@@ -132,7 +132,7 @@
 
   /* Halo soft animé pour décor */
   .halo {
-    filter: blur(40px);
+    filter: blur(32px);
   }
 
   @media (prefers-reduced-motion: reduce) {

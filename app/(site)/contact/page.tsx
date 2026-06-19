@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import ContactForm from "@/components/ContactForm";
+import CardTopBar from "@/components/CardTopBar";
 import { getPageContent } from "@/lib/content";
 
 export const dynamic = "force-dynamic";
@@ -140,7 +141,8 @@ export default async function ContactPage() {
               </div>
             </div>
 
-            <div className="rounded-3xl bg-accent-100/50 border border-accent-200 p-7">
+            <div className="relative overflow-hidden rounded-3xl bg-accent-100/50 border border-accent-200 p-7">
+              <CardTopBar index={2} />
               <h3 className="font-sans text-lg md:text-xl font-semibold tracking-tight mb-3">{c.workInfo.title}</h3>
               <ul className="space-y-2 text-sm text-ink-soft leading-relaxed">
                 {c.workInfo.items.map((item, i) => (

@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import QuoteBlock from "@/components/QuoteBlock";
 import Reveal from "@/components/Reveal";
+import CardTopBar from "@/components/CardTopBar";
 import { getPageContent } from "@/lib/content";
 
 export const dynamic = "force-dynamic";
@@ -25,9 +26,26 @@ export default async function FormationPage() {
         subtitle={c.header.subtitle}
       />
 
-      <section className="py-10 md:py-14">
+      <section className="py-8 md:py-10">
         <div className="container-prose">
-          <p className="body-text">{c.intro}</p>
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <Reveal variant="left">
+              <span className="eyebrow">{c.whatIs.eyebrow}</span>
+              <p className="body-text mt-3">{c.whatIs.text}</p>
+            </Reveal>
+            <Reveal variant="right" className="hidden lg:block">
+              <div className="relative">
+                <div className="absolute -inset-4 bg-sage-200/50 rounded-[2.5rem] blur-2xl" />
+                <Image
+                  src="/illustrations/growth.png"
+                  alt="Illustration d'un arbre en croissance"
+                  width={600}
+                  height={400}
+                  className="relative rounded-[2rem] w-full h-auto shadow-lg border border-sand-200"
+                />
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 
@@ -60,8 +78,9 @@ export default async function FormationPage() {
               return (
                 <Reveal key={i} variant="up" delay={i * 120}>
                 <div
-                  className={`rounded-2xl border border-sand-200 p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full ${c2.bg} ${c2.border}`}
+                  className={`relative overflow-hidden rounded-2xl border border-sand-200 p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full ${c2.bg} ${c2.border}`}
                 >
+                  <CardTopBar index={i} />
                   <div className={`font-serif text-3xl mb-3 ${c2.number}`}>
                     0{i + 1}
                   </div>
@@ -85,23 +104,15 @@ export default async function FormationPage() {
               {c.applications.title}
             </h2>
             <p className="body-text mt-4">{c.applications.intro}</p>
-            <div className="relative mt-8 hidden lg:block">
-              <Image
-                src="/illustrations/growth.png"
-                alt="Illustration d'un arbre en croissance"
-                width={600}
-                height={400}
-                className="rounded-2xl w-full h-auto shadow-md"
-              />
-            </div>
           </div>
 
           <ul className="space-y-4">
             {c.applications.items.map((a, i) => (
               <Reveal key={i} variant="right" delay={i * 90}>
               <li
-                className="rounded-2xl border border-sand-200 bg-white p-6 md:p-7 hover:border-bo/40 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+                className="relative overflow-hidden rounded-2xl border border-sand-200 bg-white p-6 md:p-7 hover:border-bo/40 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
               >
+                <CardTopBar index={i} />
                 <div className="flex items-baseline gap-4">
                   <span className="font-serif text-xl text-bo-dark shrink-0">
                     0{i + 1}
@@ -122,11 +133,7 @@ export default async function FormationPage() {
 
       <section className="py-10 md:py-14 bg-accent-100/40">
         <div className="container-prose">
-          <QuoteBlock
-            variant="centered"
-            quote={c.quote.text}
-            author={c.quote.author}
-          />
+          <QuoteBlock quote={c.quote.text} author={c.quote.author} />
         </div>
       </section>
 

@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import CardTopBar from "@/components/CardTopBar";
+import QuoteBlock from "@/components/QuoteBlock";
 import { getHomeContent } from "@/lib/content";
 
 export const dynamic = "force-dynamic";
@@ -84,7 +86,7 @@ export default async function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative -mt-24 pt-24 bg-gradient-to-b from-sand-100/70 via-sand-50/50 to-transparent">
+      <section className="relative pt-24 bg-gradient-to-b from-sand-100/50 via-transparent to-transparent">
         <div className="container-full grid lg:grid-cols-2 gap-10 lg:gap-14 items-center py-10 md:py-16 relative">
           <div className="animate-fade-in-up">
             <span className="eyebrow mb-5">{content.hero.eyebrow}</span>
@@ -145,7 +147,7 @@ export default async function HomePage() {
           </div>
 
           <div className="relative animate-fade-in">
-            <div className="absolute -inset-6 bg-accent-100/40 rounded-[3rem] blur-2xl animate-pulse-soft" />
+            <div className="absolute -inset-6 bg-accent-200/55 rounded-[3rem] blur-2xl animate-pulse-soft" />
             <div className="relative rounded-[2rem] overflow-hidden shadow-xl border border-sand-200 transition-transform duration-500 hover:-translate-y-1 hover:shadow-2xl">
               <Image
                 src="/illustrations/hero.png"
@@ -220,6 +222,7 @@ export default async function HomePage() {
                   href={SERVICE_LINKS[idx] ?? "/coaching"}
                   className="card group block h-full"
                 >
+                  <CardTopBar index={idx} />
                   <div
                     className={`w-12 h-12 rounded-full flex items-center justify-center mb-5 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 ${SERVICE_BUBBLE_CLASSES[idx]}`}
                   >
@@ -256,7 +259,7 @@ export default async function HomePage() {
       <section className="py-14 md:py-20">
         <div className="container-full grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <Reveal variant="left" className="order-2 lg:order-1 relative" as="div">
-            <div className="absolute -inset-4 bg-bo/10 rounded-[2.5rem] blur-2xl animate-pulse-soft" />
+            <div className="absolute -inset-4 bg-bo/20 rounded-[2.5rem] blur-2xl animate-pulse-soft" />
             <Image
               src="/illustrations/coaching.png"
               alt="Illustration d'une conversation de coaching"
@@ -283,22 +286,11 @@ export default async function HomePage() {
 
       {/* CITATION */}
       <section className="py-12 md:py-16 bg-accent-100/40">
-        <Reveal variant="scale" className="container-prose text-center" as="div">
-          <svg
-            width="36"
-            height="36"
-            viewBox="0 0 24 24"
-            className="mx-auto text-accent-400 mb-4 animate-float-slow"
-            fill="currentColor"
-          >
-            <path d="M9 7H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v2a2 2 0 0 1-2 2H4v2h1a4 4 0 0 0 4-4V7zm12 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v2a2 2 0 0 1-2 2h-1v2h1a4 4 0 0 0 4-4V7z" />
-          </svg>
-          <blockquote className="font-serif italic text-2xl md:text-3xl leading-relaxed text-accent-700 text-balance">
-            {content.citation.quote}
-          </blockquote>
-          <p className="mt-4 text-accent-600 italic">
-            {content.citation.author}
-          </p>
+        <Reveal variant="scale" className="container-prose" as="div">
+          <QuoteBlock
+            quote={content.citation.quote}
+            author={content.citation.author}
+          />
         </Reveal>
       </section>
 
@@ -308,11 +300,11 @@ export default async function HomePage() {
           <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-bo via-bo to-bo-dark px-8 md:px-14 py-12 md:py-16 text-center text-sand-50 shadow-xl bg-[length:200%_200%] animate-gradient-shift">
             <div
               aria-hidden
-              className="pointer-events-none absolute -top-10 -right-10 h-48 w-48 rounded-full bg-joy-400/30 halo animate-float"
+              className="pointer-events-none absolute -top-10 -right-10 h-48 w-48 rounded-full bg-joy-400/45 halo animate-float"
             />
             <div
               aria-hidden
-              className="pointer-events-none absolute -bottom-12 -left-12 h-56 w-56 rounded-full bg-accent-400/20 halo animate-float-slow"
+              className="pointer-events-none absolute -bottom-12 -left-12 h-56 w-56 rounded-full bg-accent-400/35 halo animate-float-slow"
             />
             <h2 className="relative font-sans text-3xl md:text-4xl font-semibold leading-tight tracking-tight text-balance text-sand-50">
               {content.finalCta.title}

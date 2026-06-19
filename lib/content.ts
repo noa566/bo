@@ -100,7 +100,7 @@ export type LeCoachingContent = {
 
 export type FormationContent = {
   header: PageHeaderContent;
-  intro: string;
+  whatIs: { eyebrow: string; text: string };
   expertises: {
     eyebrow: string;
     title: string;
@@ -288,7 +288,7 @@ export const defaultCoachingContent: CoachingContent = {
     eyebrow: "Coaching personnel et d'équipe",
     title: "Quel coaching ?",
     subtitle:
-      "Je vous propose plusieurs orientations pour répondre à vos objectifs. Vous déterminez la direction au début du processus selon vos besoins, qui se combinent souvent lors de l'accompagnement.",
+      "Plusieurs orientations possibles. Vous choisissez la direction, souvent combinées au fil du processus.",
   },
   intro:
     "Voici quelques exemples concrets de thèmes que nous pouvons aborder ensemble.",
@@ -505,10 +505,12 @@ export const defaultFormationContent: FormationContent = {
     eyebrow: "Formation",
     title: "Formation",
     subtitle:
-      "Faire évoluer les pratiques — Réaliser le potentiel — Renforcer la dynamique",
+      "Faire évoluer les pratiques, réaliser le potentiel et renforcer la dynamique.",
   },
-  intro:
-    "Vous souhaitez monter en compétences avec votre équipe ou développer un savoir-faire spécifique ? Je propose des formations pour progresser avec sens, engagement et efficacité, dans un cadre professionnel ou associatif. Mes interventions sont conçues pour répondre à vos besoins en tenant compte de vos réalités de terrain (de la 1/2 journée à plusieurs jours), toujours avec une approche participative et ancrée dans l'expérience.",
+  whatIs: {
+    eyebrow: "Mon approche",
+    text: "Des formations participatives et ancrées dans l'expérience, conçues pour répondre à vos besoins et à vos réalités de terrain — de la demi-journée à plusieurs jours, en contexte professionnel ou associatif.",
+  },
   expertises: {
     eyebrow: "Mes domaines d'expertise",
     title: "Trois piliers pour vos formations",

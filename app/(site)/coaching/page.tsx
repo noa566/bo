@@ -2,6 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import Reveal from "@/components/Reveal";
+import CardTopBar from "@/components/CardTopBar";
+import QuoteBlock from "@/components/QuoteBlock";
 import { getPageContent } from "@/lib/content";
 
 export const dynamic = "force-dynamic";
@@ -43,10 +45,11 @@ export default async function CoachingPage() {
               ];
               return (
               <Reveal key={idx} variant="up" delay={(idx % 2) * 120}><article
-                className={`rounded-3xl bg-white border border-sand-200 p-7 md:p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col h-full ${
+                className={`relative overflow-hidden rounded-3xl bg-white border border-sand-200 p-7 md:p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col h-full ${
                   borderHovers[idx % borderHovers.length]
                 }`}
               >
+                <CardTopBar index={idx} />
                 <div className="flex items-baseline gap-4 mb-2">
                   <span
                     className={`font-serif text-3xl ${
@@ -64,14 +67,13 @@ export default async function CoachingPage() {
                   {o.subtitle}
                 </p>
 
-                <figure className="quote-block mb-5">
-                  <blockquote className="font-serif text-base italic leading-relaxed">
-                    « {o.quote.text} »
-                  </blockquote>
-                  <figcaption className="quote-author">
-                    {o.quote.author}
-                  </figcaption>
-                </figure>
+                <div className="mb-5">
+                  <QuoteBlock
+                    variant="inline"
+                    quote={o.quote.text}
+                    author={o.quote.author}
+                  />
+                </div>
 
                 <ul className="space-y-3 mt-auto">
                   {o.items.map((it, i) => (
@@ -95,8 +97,8 @@ export default async function CoachingPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-12 md:py-16 bg-accent-100/40">
-        <div className="container-prose text-center">
+      <section className="py-12 md:py-16">
+        <div className="container-prose text-center relative">
           <h2 className="h-section text-balance">{c.cta.title}</h2>
           <p className="lead mt-4 text-balance">{c.cta.lead}</p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -109,6 +111,11 @@ export default async function CoachingPage() {
           </div>
         </div>
       </section>
+
+      <div
+        aria-hidden
+        className="pointer-events-none absolute bottom-0 -left-16 md:left-[8%] h-80 w-80 translate-y-1/2 rounded-full bg-accent-300/55 halo animate-float-slow -z-10"
+      />
     </>
   );
 }

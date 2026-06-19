@@ -14,7 +14,7 @@ const navItems = [
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-bo text-sand-50 mt-16">
+    <footer className="relative z-10 bg-bo text-sand-50">
       <div className="container-full py-10 md:py-12 grid gap-8 md:gap-10 md:grid-cols-3">
         <div>
           <Image

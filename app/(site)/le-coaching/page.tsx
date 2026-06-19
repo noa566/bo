@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import QuoteBlock from "@/components/QuoteBlock";
 import Reveal from "@/components/Reveal";
+import CardTopBar, { BAR_NUMBER_COLORS } from "@/components/CardTopBar";
 import { getPageContent } from "@/lib/content";
 
 export const dynamic = "force-dynamic";
@@ -34,7 +35,7 @@ export default async function LeCoachingPage() {
             </Reveal>
             <Reveal variant="right" className="hidden lg:block">
               <div className="relative">
-                <div className="absolute -inset-4 bg-accent-100/40 rounded-[2.5rem] blur-2xl" />
+                <div className="absolute -inset-4 bg-accent-200/50 rounded-[2.5rem] blur-2xl" />
                 <Image
                   src="/illustrations/coaching-journey.png"
                   alt="Illustration d'une personne sur un chemin vers le soleil levant"
@@ -48,19 +49,26 @@ export default async function LeCoachingPage() {
         </div>
       </section>
 
-      <section className="py-10 md:py-12 bg-white border-y border-sand-200">
+      <section className="py-10 md:py-12">
         <div className="container-prose">
           <div className="text-center mb-8">
             <span className="eyebrow">{c.domains.eyebrow}</span>
             <h2 className="h-section mt-3 text-balance">{c.domains.title}</h2>
           </div>
           <ul className="grid md:grid-cols-2 gap-4">
-            {c.domains.items.map((d, i) => (
+            {c.domains.items.map((d, i) => {
+              const colorIdx = i === 2 ? 3 : i === 3 ? 2 : i;
+              return (
               <Reveal key={i} variant="up" delay={(i % 2) * 100}>
               <li
-                className="rounded-2xl border border-sand-200 bg-sand-50 p-6 transition-all duration-300 hover:border-bo/40 hover:shadow-lg hover:-translate-y-0.5 h-full"
+                className="relative overflow-hidden rounded-2xl border border-sand-200 bg-sand-50 p-6 transition-all duration-300 hover:border-bo/40 hover:shadow-lg hover:-translate-y-0.5 h-full"
               >
-                <span className="font-serif text-base text-bo-dark">
+                <CardTopBar index={colorIdx} />
+                <span
+                  className={`font-serif text-base ${
+                    BAR_NUMBER_COLORS[colorIdx % BAR_NUMBER_COLORS.length]
+                  }`}
+                >
                   0{i + 1}
                 </span>
                 <h3 className="font-sans text-base md:text-lg font-semibold tracking-tight mt-2 mb-2">
@@ -71,7 +79,8 @@ export default async function LeCoachingPage() {
                 </p>
               </li>
               </Reveal>
-            ))}
+              );
+            })}
           </ul>
         </div>
       </section>
@@ -124,11 +133,7 @@ export default async function LeCoachingPage() {
 
       <section className="py-10 md:py-12">
         <div className="container-prose">
-          <QuoteBlock
-            variant="centered"
-            quote={c.quote.text}
-            author={c.quote.author}
-          />
+          <QuoteBlock quote={c.quote.text} author={c.quote.author} />
           <div className="mt-10 text-center">
             <h2 className="h-section text-balance">{c.cta.title}</h2>
             <p className="lead mt-4">{c.cta.lead}</p>

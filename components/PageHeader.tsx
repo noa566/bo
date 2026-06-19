@@ -7,7 +7,7 @@ type Props = {
 
 export default function PageHeader({ title, subtitle }: Props) {
   return (
-    <section className="relative bg-gradient-to-b from-sand-100/80 to-sand-50/40 border-b border-sand-200/70">
+    <section className="relative pt-24 bg-gradient-to-b from-sand-100/50 to-transparent">
       <div className="container-prose py-12 md:py-16 text-center animate-fade-in-up">
         <h1 className="h-display text-balance">{title}</h1>
         {subtitle && (

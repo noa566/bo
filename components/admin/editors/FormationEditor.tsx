@@ -27,11 +27,21 @@ export default function FormationEditor({
       </Section>
 
       <Section title="Introduction">
-        <Field label="Paragraphe d'intro">
+        <Field label="Pré-titre">
+          <Input
+            value={value.whatIs.eyebrow}
+            onChange={(v) =>
+              onChange({ ...value, whatIs: { ...value.whatIs, eyebrow: v } })
+            }
+          />
+        </Field>
+        <Field label="Texte">
           <Textarea
-            rows={5}
-            value={value.intro}
-            onChange={(v) => onChange({ ...value, intro: v })}
+            rows={4}
+            value={value.whatIs.text}
+            onChange={(v) =>
+              onChange({ ...value, whatIs: { ...value.whatIs, text: v } })
+            }
           />
         </Field>
       </Section>

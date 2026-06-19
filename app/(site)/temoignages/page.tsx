@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import Reveal from "@/components/Reveal";
+import CardTopBar from "@/components/CardTopBar";
 import { getPageContent } from "@/lib/content";
 
 export const dynamic = "force-dynamic";
@@ -35,8 +36,9 @@ export default async function TemoignagesPage() {
                 className={t.long ? "md:col-span-2" : ""}
               >
               <figure
-                className="rounded-3xl border border-sand-200 bg-white p-7 md:p-8 hover:shadow-xl hover:border-bo/30 hover:-translate-y-1 transition-all duration-300 relative h-full"
+                className="relative overflow-hidden rounded-3xl border border-sand-200 bg-white p-7 md:p-8 hover:shadow-xl hover:border-bo/30 hover:-translate-y-1 transition-all duration-300 h-full"
               >
+                <CardTopBar index={i} />
                 <svg
                   width="32"
                   height="32"
@@ -68,17 +70,22 @@ export default async function TemoignagesPage() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-accent-100/40">
-        <div className="container-prose text-center">
+      <section className="py-12 md:py-16">
+        <div className="container-prose text-center relative">
           <h2 className="h-section text-balance">{c.cta.title}</h2>
           <p className="lead mt-4">{c.cta.lead}</p>
-          <div className="mt-8">
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link href="/contact" className="btn-primary">
               {c.cta.button}
             </Link>
           </div>
         </div>
       </section>
+
+      <div
+        aria-hidden
+        className="pointer-events-none absolute bottom-0 -right-16 md:right-[8%] h-80 w-80 translate-y-1/2 rounded-full bg-accent-300/55 halo animate-float-slow -z-10"
+      />
     </>
   );
 }
