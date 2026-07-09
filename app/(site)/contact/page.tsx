@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import ContactForm from "@/components/ContactForm";
-import CardTopBar from "@/components/CardTopBar";
 import { getPageContent } from "@/lib/content";
 
 export const dynamic = "force-dynamic";
@@ -26,11 +25,10 @@ export default async function ContactPage() {
       <section className="py-12 md:py-16">
         <div className="container-full grid lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-16 items-start">
           <div className="order-2 lg:order-1">
-            <span className="eyebrow">{c.form.eyebrow}</span>
-            <h2 className="h-section mt-3 mb-7 text-balance">
-              {c.form.title}
-            </h2>
-            <ContactForm />
+            <h2 className="h-section text-balance text-joy-500">Formulaire de contact</h2>
+            <div className="mt-7">
+              <ContactForm />
+            </div>
           </div>
 
           <aside className="order-1 lg:order-2 lg:sticky lg:top-32 space-y-6">
@@ -100,6 +98,33 @@ export default async function ContactPage() {
                   </div>
                 </a>
 
+                <a
+                  href="https://www.linkedin.com/in/borislazzarotto/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-4 group"
+                >
+                  <div className="w-10 h-10 rounded-full bg-sand-50/15 flex items-center justify-center shrink-0 group-hover:bg-sand-50/25 transition-colors">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="text-sand-50"
+                    >
+                      <path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5zM3 9h4v12H3V9zm6 0h3.8v1.64h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9V9z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-wider text-sand-50/70 mb-1">
+                      LinkedIn
+                    </p>
+                    <p className="text-sm group-hover:underline underline-offset-4 break-all">
+                      /in/borislazzarotto
+                    </p>
+                  </div>
+                </a>
+
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-full bg-sand-50/15 flex items-center justify-center shrink-0">
                     <svg
@@ -139,16 +164,6 @@ export default async function ContactPage() {
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="relative overflow-hidden rounded-3xl bg-accent-100/50 border border-accent-200 p-7">
-              <CardTopBar index={2} />
-              <h3 className="font-sans text-lg md:text-xl font-semibold tracking-tight mb-3">{c.workInfo.title}</h3>
-              <ul className="space-y-2 text-sm text-ink-soft leading-relaxed">
-                {c.workInfo.items.map((item, i) => (
-                  <li key={i}>· {item}</li>
-                ))}
-              </ul>
             </div>
           </aside>
         </div>

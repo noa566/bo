@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import Reveal from "@/components/Reveal";
@@ -27,13 +26,16 @@ export default async function TemoignagesPage() {
       <section className="py-12 md:py-16">
         <div className="container-full">
           <div className="grid md:grid-cols-2 gap-5 md:gap-6">
-            {c.testimonials.map((t, i) => (
+            {c.testimonials.map((t, i) => {
+              const isLastAlone =
+                i === c.testimonials.length - 1 && !t.long;
+              return (
               <Reveal
                 key={i}
                 variant="up"
                 delay={(i % 4) * 100}
                 as="div"
-                className={t.long ? "md:col-span-2" : ""}
+                className={t.long || isLastAlone ? "md:col-span-2" : ""}
               >
               <figure
                 className="relative overflow-hidden rounded-3xl border border-sand-200 bg-white p-7 md:p-8 hover:shadow-xl hover:border-bo/30 hover:-translate-y-1 transition-all duration-300 h-full"
@@ -65,19 +67,8 @@ export default async function TemoignagesPage() {
                 </figcaption>
               </figure>
               </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 md:py-16">
-        <div className="container-prose text-center relative">
-          <h2 className="h-section text-balance">{c.cta.title}</h2>
-          <p className="lead mt-4">{c.cta.lead}</p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link href="/contact" className="btn-primary">
-              {c.cta.button}
-            </Link>
+              );
+            })}
           </div>
         </div>
       </section>

@@ -35,13 +35,15 @@ const SERVICE_ICONS = [
       fill="none"
       className="text-accent-600"
     >
-      <circle cx="9" cy="8" r="3" stroke="currentColor" strokeWidth="1.5" />
-      <circle cx="17" cy="10" r="2.5" stroke="currentColor" strokeWidth="1.5" />
+      <circle cx="12" cy="8" r="3" stroke="currentColor" strokeWidth="1.5" />
+      <circle cx="5" cy="9.5" r="2.2" stroke="currentColor" strokeWidth="1.5" />
+      <circle cx="19" cy="9.5" r="2.2" stroke="currentColor" strokeWidth="1.5" />
       <path
-        d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M14 20c0-2.5 2-4.5 4.5-4.5"
+        d="M7 20c0-2.8 2.2-5 5-5s5 2.2 5 5M2.5 20c0-2 1.1-3.7 3-4.4M21.5 20c0-2-1.1-3.7-3-4.4"
         stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   ),
@@ -87,46 +89,27 @@ export default async function HomePage() {
     <>
       {/* HERO */}
       <section className="relative pt-24 bg-gradient-to-b from-sand-100/50 via-transparent to-transparent">
-        <div className="container-full grid lg:grid-cols-2 gap-10 lg:gap-14 items-center py-10 md:py-16 relative">
+        <div className="container-full grid lg:grid-cols-2 gap-10 lg:gap-14 items-center pt-10 md:pt-16 pb-6 md:pb-8 relative">
           <div className="animate-fade-in-up">
             <span className="eyebrow mb-5">{content.hero.eyebrow}</span>
-            <h1 className="h-display mt-4 text-balance">
+            <h1 className="h-display not-italic mt-4 text-balance">
               {content.hero.titleStart}{" "}
-              <span className="text-accent-500 italic">
-                {content.hero.titleAccent}
+              <span className="whitespace-nowrap">
+                <span style={{ color: "#7C3AED" }}>
+                  {content.hero.titleAccent}
+                </span>
+                {content.hero.titleEnd}
               </span>
-              {content.hero.titleEnd}
             </h1>
             <p className="lead mt-5 max-w-xl text-balance">
               {content.hero.lead}
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Link href="/contact" className="btn-primary shine-on-hover group">
-                {content.hero.ctaPrimary}
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  aria-hidden
-                  className="transition-transform group-hover:translate-x-1"
-                >
-                  <path
-                    d="M3 8h10m-4-4l4 4-4 4"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </Link>
-              <Link href="/le-coaching" className="btn-secondary">
-                {content.hero.ctaSecondary}
-              </Link>
-            </div>
-
             <dl className="mt-10 grid grid-cols-3 gap-6 max-w-md">
-              {content.hero.stats.map((stat, idx) => (
+              {[
+                { value: "COACH", label: "certifié" },
+                { value: "PRATICIEN", label: "PNL" },
+                { value: "FORMATEUR", label: "FSEA" },
+              ].map((stat, idx) => (
                 <Reveal
                   key={idx}
                   variant="up"
@@ -134,7 +117,7 @@ export default async function HomePage() {
                   as="div"
                 >
                   <dt
-                    className={`font-serif text-3xl ${
+                    className={`font-serif text-lg ${
                       STAT_COLORS[idx % STAT_COLORS.length]
                     }`}
                   >
@@ -160,43 +143,18 @@ export default async function HomePage() {
             </div>
           </div>
         </div>
-
-        {/* Indicateur scroll */}
-        <div className="hidden md:flex justify-center pb-6">
-          <div className="flex flex-col items-center gap-1 text-ink-muted">
-            <span className="text-[10px] uppercase tracking-widest">
-              Découvrir
-            </span>
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 16 16"
-              fill="none"
-              className="animate-bounce-soft"
-              aria-hidden
-            >
-              <path
-                d="M3 6l5 5 5-5"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
-        </div>
       </section>
 
       {/* INTRODUCTION / PHILOSOPHIE */}
       <section className="py-14 md:py-20">
         <Reveal variant="up" className="container-prose text-center" as="div">
           <span className="eyebrow">{content.philosophy.eyebrow}</span>
-          <p className="font-serif italic text-2xl md:text-3xl leading-relaxed mt-5 text-balance text-ink">
-            {content.philosophy.quote}
-          </p>
-          <p className="text-sm text-ink-muted mt-4 italic">
-            {content.philosophy.author}
-          </p>
+          <div className="mt-5">
+            <QuoteBlock
+              quote={content.philosophy.quote.replace(/^«\s*|\s*»$/g, "")}
+              author=""
+            />
+          </div>
         </Reveal>
       </section>
 

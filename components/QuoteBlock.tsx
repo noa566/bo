@@ -1,3 +1,5 @@
+import AutoFitQuote from "./AutoFitQuote";
+
 type Props = {
   quote: string;
   author: string;
@@ -46,12 +48,12 @@ export default function QuoteBlock({
       {showIcon && (
         <QuoteIcon className="mx-auto text-accent-400 mb-4 animate-float-slow" />
       )}
-      <blockquote className="font-serif text-2xl md:text-3xl italic leading-relaxed text-accent-700 text-balance max-w-3xl mx-auto">
-        « {quote} »
-      </blockquote>
-      <figcaption className="mt-4 text-sm text-accent-600 italic">
-        {author}
-      </figcaption>
+      <AutoFitQuote text={quote} />
+      {author && (
+        <figcaption className="mt-4 text-sm text-accent-600 italic">
+          {author}
+        </figcaption>
+      )}
     </figure>
   );
 }

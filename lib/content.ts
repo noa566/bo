@@ -168,17 +168,17 @@ export type ContactContent = {
 
 export const defaultHomeContent: HomeContent = {
   hero: {
-    eyebrow: "Coaching mental · Genève",
+    eyebrow: "COachiNg et FORMATiON à Genève",
     titleStart: "Révéler votre",
     titleAccent: "potentiel",
-    titleEnd: ", un pas à la fois.",
-    lead: "Coaching personnel, coaching d'équipe et formations pour vous accompagner dans vos transitions, clarifier vos priorités et construire l'avenir qui vous ressemble.",
+    titleEnd: ", pas après pas.",
+    lead: "Coaching personnel, coaching d'équipe et formation pour vous accompagner dans vos transitions, clarifier vos priorités et construire l'avenir qui vous ressemble.",
     ctaPrimary: "Séance découverte",
     ctaSecondary: "Découvrir le coaching",
     stats: [
-      { value: "10+", label: "Années d'expérience" },
-      { value: "FSEA", label: "Formateur certifié" },
-      { value: "PNL", label: "Praticien" },
+      { value: "COACH", label: "certifié" },
+      { value: "PRATICIEN", label: "PNL" },
+      { value: "FORMATEUR", label: "FSEA" },
     ],
   },
   philosophy: {
@@ -278,7 +278,7 @@ export const defaultCoachContent: CoachContent = {
   },
   cta: {
     title: "Envie d'échanger autour d'un projet ?",
-    lead: "La première séance est sans engagement.",
+    lead: "Parlons-en ensemble pour construire une intervention sur mesure.",
     button: "Me contacter",
   },
 };
@@ -461,6 +461,10 @@ export const defaultLeCoachingContent: LeCoachingContent = {
         title: "Jouer avec nos lumières et nos ombres",
         text: "Quand notre petit ange collabore avec le diablotin.",
       },
+      {
+        title: "Cultiver la confiance en soi",
+        text: "Quand nos ressources intérieures ne demandent qu'à être révélées.",
+      },
     ],
   },
   deontology: {
@@ -475,12 +479,12 @@ export const defaultLeCoachingContent: LeCoachingContent = {
     title: "Un cheminement clair",
     steps: [
       {
-        title: "La séance « fondation »",
-        text: "Nous commençons par une séance sans engagement pour faire connaissance, vous présenter plus en détail ce qu'est le coaching, clarifier vos attentes et répondre à vos questions.",
+        title: "Votre demande",
+        text: "Merci de me laisser un message sur la page « Contact » : je vous rappelle pour faire connaissance et préciser votre demande.",
       },
       {
-        title: "L'accord écrit",
-        text: "Si nous décidons de poursuivre, un accord écrit précise notre collaboration : objectifs, modalités et engagements réciproques.",
+        title: "Séance de « fondation »",
+        text: "Nous commençons par une séance sans engagement pour clarifier vos attentes, vous présenter plus en détail le processus de coaching et répondre à vos questions.",
       },
       {
         title: "Les séances",
@@ -493,8 +497,8 @@ export const defaultLeCoachingContent: LeCoachingContent = {
     author: "Socrate",
   },
   cta: {
-    title: "Curieux de tester une séance ?",
-    lead: "La séance fondation est sans engagement. C'est l'occasion idéale pour commencer.",
+    title: "Envie d'échanger autour d'un projet ?",
+    lead: "Parlons-en ensemble pour construire une intervention sur mesure.",
     primaryButton: "Réserver ma séance fondation",
     secondaryButton: "Voir les tarifs",
   },
@@ -524,7 +528,7 @@ export const defaultFormationContent: FormationContent = {
         text: "Qualité d'écoute, expression des besoins et ressentis, régulation des tensions",
       },
       {
-        title: "Compétences psychosociales",
+        title: "Compétences personnelles et sociales",
         text: "Gestion des émotions, pensée critique et créative, prise de décision",
       },
     ],
@@ -562,7 +566,7 @@ export const defaultFormationContent: FormationContent = {
     author: "Jiddu Krishnamurti",
   },
   cta: {
-    title: "Vous avez un projet de formation ?",
+    title: "Envie d'échanger autour d'un projet ?",
     lead: "Parlons-en ensemble pour construire une intervention sur mesure.",
     primaryButton: "Demander un devis",
     secondaryButton: "Tarifs formation",
@@ -579,8 +583,8 @@ export const defaultTarifsContent: TarifsContent = {
     {
       title: "Coaching personnel",
       duration: "Séances 1h",
-      highlight: true,
-      highlightLabel: "Le plus choisi",
+      highlight: false,
+      highlightLabel: "",
       options: [
         { label: "6 séances", price: "CHF 780.–" },
         { label: "10 séances", price: "CHF 1'200.–" },
@@ -682,6 +686,7 @@ export const defaultContactContent: ContactContent = {
       "Première séance fondation sans engagement",
       "Confidentialité garantie",
       "En présentiel ou en visio",
+      "Contact téléphonique",
     ],
   },
 };

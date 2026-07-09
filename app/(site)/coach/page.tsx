@@ -69,24 +69,25 @@ export default async function CoachPage() {
       </section>
 
       {/* Inspiration quote */}
-      <section className="py-12 md:py-16">
+      <section className="py-10 md:py-14 bg-accent-100/40">
         <div className="container-prose">
-          <div className="text-center">
-            <QuoteBlock
-              quote={c.inspiration.quote}
-              author={c.inspiration.author}
-            />
-          </div>
+          <QuoteBlock
+            quote={c.inspiration.quote}
+            author={c.inspiration.author}
+          />
         </div>
       </section>
 
       {/* Formations */}
-      <section className="py-12 md:py-16 bg-accent-100/40">
+      <section className="relative isolate py-12 md:py-16">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute top-1/3 -left-16 md:left-[6%] h-72 w-72 -translate-y-1/2 rounded-full bg-accent-300/50 halo animate-float-slow -z-10"
+        />
         <div className="container-full grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
           <div>
-            <span className="eyebrow">{c.formations.eyebrow}</span>
-            <h2 className="h-section mt-3 text-balance">
-              {c.formations.title}
+            <h2 className="h-section text-balance text-bo-dark">
+              {c.formations.eyebrow}
             </h2>
             <ul className="mt-6 space-y-3">
               {c.formations.items.map((item, i) => (

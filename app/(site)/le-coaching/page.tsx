@@ -93,7 +93,11 @@ export default async function LeCoachingPage() {
         </div>
       </section>
 
-      <section className="py-10 md:py-12 bg-accent-100/40">
+      <section className="relative isolate py-14 md:py-20 bg-sand-100/60">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute top-1/3 left-0 md:left-[8%] h-72 w-72 -translate-y-1/2 rounded-full bg-accent-300/50 halo animate-float-slow -z-10"
+        />
         <div className="container-prose">
           <span className="eyebrow">{c.process.eyebrow}</span>
           <h2 className="h-section mt-3 text-balance">{c.process.title}</h2>
@@ -131,10 +135,15 @@ export default async function LeCoachingPage() {
         </div>
       </section>
 
-      <section className="py-10 md:py-12">
+      <section className="py-10 md:py-14 bg-accent-100/40">
         <div className="container-prose">
           <QuoteBlock quote={c.quote.text} author={c.quote.author} />
-          <div className="mt-10 text-center">
+        </div>
+      </section>
+
+      <section className="py-10 md:py-12">
+        <div className="container-prose">
+          <div className="text-center">
             <h2 className="h-section text-balance">{c.cta.title}</h2>
             <p className="lead mt-4">{c.cta.lead}</p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
