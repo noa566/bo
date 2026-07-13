@@ -26,9 +26,9 @@ export default async function FormationPage() {
         subtitle={c.header.subtitle}
       />
 
-      <section className="py-8 md:py-10">
+      <section className="py-6 md:py-8">
         <div className="container-prose">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-10 items-center">
             <Reveal variant="left">
               <span className="eyebrow">{c.whatIs.eyebrow}</span>
               <p className="body-text mt-3">{c.whatIs.text}</p>
@@ -38,7 +38,7 @@ export default async function FormationPage() {
                 <div className="absolute -inset-4 bg-sage-200/50 rounded-[2.5rem] blur-2xl" />
                 <Image
                   src="/illustrations/growth.png"
-                  alt="Illustration d'un arbre en croissance"
+                  alt="Illustration de la croissance : de la graine à l'arbre florissant"
                   width={600}
                   height={400}
                   className="relative rounded-[2rem] w-full h-auto shadow-lg border border-sand-200"
@@ -49,7 +49,7 @@ export default async function FormationPage() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-white border-y border-sand-200">
+      <section className="py-8 md:py-12 bg-white border-y border-sand-200">
         <div className="container-full">
           <div className="text-center mb-10">
             <span className="eyebrow">{c.expertises.eyebrow}</span>
@@ -96,8 +96,8 @@ export default async function FormationPage() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16">
-        <div className="container-full grid lg:grid-cols-[1fr_1.4fr] gap-10 lg:gap-14 items-start">
+      <section className="py-8 md:py-12">
+        <div className="container-full grid lg:grid-cols-[1fr_1.4fr] gap-8 lg:gap-10 items-start">
           <div className="lg:sticky lg:top-32">
             <span className="eyebrow">{c.applications.eyebrow}</span>
             <h2 className="h-section mt-3 text-balance">
@@ -131,17 +131,17 @@ export default async function FormationPage() {
         </div>
       </section>
 
-      <section className="py-10 md:py-14 bg-accent-100/40">
+      <section className="py-5 md:py-7 bg-accent-100/40">
         <div className="container-prose">
           <QuoteBlock quote={c.quote.text} author={c.quote.author} />
         </div>
       </section>
 
-      <section className="py-12 md:py-16">
+      <section className="py-8 md:py-12">
         <div className="container-prose text-center">
           <h2 className="h-section text-balance">{c.cta.title}</h2>
           <p className="lead mt-4">{c.cta.lead}</p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
+          <div className="mt-6 flex flex-wrap justify-center gap-4">
             <Link href="/contact" className="btn-primary">
               {c.cta.primaryButton}
             </Link>

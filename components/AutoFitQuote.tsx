@@ -56,7 +56,9 @@ export default function AutoFitQuote({ text }: { text: string }) {
         className="mx-auto block w-full text-center font-serif italic leading-relaxed text-accent-700 whitespace-nowrap"
         style={{ fontSize: 30 }}
       >
-        « {text} »
+        «{"\u202F"}
+        {text}
+        {"\u202F"}»
       </blockquote>
     </div>
   );

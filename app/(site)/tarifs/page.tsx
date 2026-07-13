@@ -25,7 +25,7 @@ export default async function TarifsPage() {
         subtitle={c.header.subtitle}
       />
 
-      <section className="py-12 md:py-16">
+      <section className="py-8 md:py-12">
         <div className="container-full">
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {c.plans.map((p, idx) => (
@@ -103,7 +103,7 @@ export default async function TarifsPage() {
             ))}
           </div>
 
-          <div className="mt-10 grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="mt-7 grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <Reveal
               variant="up"
               className="relative overflow-hidden rounded-2xl bg-accent-100/50 border border-accent-200 p-7 text-center transition-all hover:shadow-lg hover:border-accent-300 h-full"

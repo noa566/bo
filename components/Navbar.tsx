@@ -46,12 +46,12 @@ export default function Navbar() {
           aria-label="Bo Coaching - Accueil"
         >
           <Image
-            src="/logo.svg"
+            src="/logo.png"
             alt="Bo Coaching"
             width={140}
             height={56}
             priority
-            className="h-12 w-auto transition-transform group-hover:scale-105"
+            className="h-10 w-auto transition-transform group-hover:scale-105"
           />
         </Link>
 
@@ -59,8 +59,7 @@ export default function Navbar() {
         <ul className="hidden lg:flex items-center gap-1">
           {navItems.map((item) => {
             const isActive =
-              pathname === item.href ||
-              (item.href !== "/" && pathname.startsWith(item.href));
+              pathname === item.href || pathname.startsWith(`${item.href}/`);
             return (
               <li key={item.href}>
                 <Link
@@ -120,8 +119,7 @@ export default function Navbar() {
         <ul className="container-full flex flex-col gap-1 pb-6">
           {navItems.map((item) => {
             const isActive =
-              pathname === item.href ||
-              (item.href !== "/" && pathname.startsWith(item.href));
+              pathname === item.href || pathname.startsWith(`${item.href}/`);
             return (
               <li key={item.href}>
                 <Link

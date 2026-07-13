@@ -23,7 +23,7 @@ export default async function TemoignagesPage() {
         subtitle={c.header.subtitle}
       />
 
-      <section className="py-12 md:py-16">
+      <section className="py-8 md:py-12">
         <div className="container-full">
           <div className="grid md:grid-cols-2 gap-5 md:gap-6">
             {c.testimonials.map((t, i) => {

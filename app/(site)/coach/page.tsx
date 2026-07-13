@@ -25,8 +25,8 @@ export default async function CoachPage() {
         subtitle={c.header.subtitle}
       />
 
-      <section className="py-12 md:py-16">
-        <div className="container-full grid lg:grid-cols-[1fr_1.3fr] gap-10 lg:gap-14 items-start">
+      <section className="py-8 md:py-12">
+        <div className="container-full grid lg:grid-cols-[1fr_1.3fr] gap-8 lg:gap-10 items-start">
           <div className="relative lg:sticky lg:top-32">
             <div className="aspect-[4/5] rounded-[2rem] overflow-hidden bg-sand-100 shadow-xl border border-sand-200">
               <Image
@@ -40,7 +40,7 @@ export default async function CoachPage() {
             </div>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-4">
             {c.intro.paragraphs.map((paragraph, i) => (
               <Reveal key={i} variant="up" delay={i * 100}>
                 <p className="body-text">{paragraph}</p>
@@ -51,7 +51,7 @@ export default async function CoachPage() {
       </section>
 
       {/* Conviction / Engagement */}
-      <section className="py-12 md:py-16 bg-white border-y border-sand-200">
+      <section className="py-8 md:py-12 bg-white border-y border-sand-200">
         <div className="container-prose grid md:grid-cols-2 gap-10">
           <Reveal variant="left">
             <span className="eyebrow">{c.conviction.eyebrow}</span>
@@ -69,7 +69,7 @@ export default async function CoachPage() {
       </section>
 
       {/* Inspiration quote */}
-      <section className="py-10 md:py-14 bg-accent-100/40">
+      <section className="py-5 md:py-7 bg-accent-100/40">
         <div className="container-prose">
           <QuoteBlock
             quote={c.inspiration.quote}
@@ -79,12 +79,12 @@ export default async function CoachPage() {
       </section>
 
       {/* Formations */}
-      <section className="relative isolate py-12 md:py-16">
+      <section className="relative isolate py-8 md:py-12">
         <div
           aria-hidden
           className="pointer-events-none absolute top-1/3 -left-16 md:left-[6%] h-72 w-72 -translate-y-1/2 rounded-full bg-accent-300/50 halo animate-float-slow -z-10"
         />
-        <div className="container-full grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+        <div className="container-full grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
           <div>
             <h2 className="h-section text-balance text-bo-dark">
               {c.formations.eyebrow}
@@ -113,11 +113,11 @@ export default async function CoachPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-12 md:py-16">
+      <section className="py-8 md:py-12">
         <div className="container-prose text-center">
           <h2 className="h-section text-balance">{c.cta.title}</h2>
           <p className="lead mt-4">{c.cta.lead}</p>
-          <div className="mt-8">
+          <div className="mt-6">
             <Link href="/contact" className="btn-primary">
               {c.cta.button}
             </Link>

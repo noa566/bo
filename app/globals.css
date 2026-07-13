@@ -54,7 +54,7 @@
   }
 
   .body-text {
-    @apply text-base md:text-[17px] text-ink-soft leading-[1.75];
+    @apply text-base md:text-[17px] text-ink-soft leading-[1.65];
   }
 
   .btn-primary {
@@ -138,6 +138,7 @@
   @media (prefers-reduced-motion: reduce) {
     .animate-float,
     .animate-float-slow,
+    .animate-float-fast,
     .animate-pulse-soft,
     .animate-bounce-soft,
     .animate-shine,

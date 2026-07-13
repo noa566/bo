@@ -88,14 +88,14 @@ export default async function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative pt-24 bg-gradient-to-b from-sand-100/50 via-transparent to-transparent">
-        <div className="container-full grid lg:grid-cols-2 gap-10 lg:gap-14 items-center pt-10 md:pt-16 pb-6 md:pb-8 relative">
+      <section className="relative pt-20 bg-gradient-to-b from-sand-100/50 via-transparent to-transparent">
+        <div className="container-full grid lg:grid-cols-2 gap-8 lg:gap-10 items-center pt-7 md:pt-10 pb-5 md:pb-6 relative">
           <div className="animate-fade-in-up">
-            <span className="eyebrow mb-5">{content.hero.eyebrow}</span>
-            <h1 className="h-display not-italic mt-4 text-balance">
+            <span className="eyebrow mb-3">{content.hero.eyebrow}</span>
+            <h1 className="h-display not-italic mt-3 text-balance">
               {content.hero.titleStart}{" "}
               <span className="whitespace-nowrap">
-                <span style={{ color: "#7C3AED" }}>
+                <span style={{ color: "#E91E9A" }}>
                   {content.hero.titleAccent}
                 </span>
                 {content.hero.titleEnd}
@@ -104,7 +104,7 @@ export default async function HomePage() {
             <p className="lead mt-5 max-w-xl text-balance">
               {content.hero.lead}
             </p>
-            <dl className="mt-10 grid grid-cols-3 gap-6 max-w-md">
+            <dl className="mt-7 grid grid-cols-3 gap-6 max-w-md">
               {[
                 { value: "COACH", label: "certifié" },
                 { value: "PRATICIEN", label: "PNL" },
@@ -133,8 +133,8 @@ export default async function HomePage() {
             <div className="absolute -inset-6 bg-accent-200/55 rounded-[3rem] blur-2xl animate-pulse-soft" />
             <div className="relative rounded-[2rem] overflow-hidden shadow-xl border border-sand-200 transition-transform duration-500 hover:-translate-y-1 hover:shadow-2xl">
               <Image
-                src="/illustrations/hero.png"
-                alt="Illustration d'un chemin vers le soleil levant"
+                src="/illustrations/coaching-crossroads.png"
+                alt="Illustration de deux personnes à la croisée de trois chemins"
                 width={1200}
                 height={800}
                 priority
@@ -146,7 +146,7 @@ export default async function HomePage() {
       </section>
 
       {/* INTRODUCTION / PHILOSOPHIE */}
-      <section className="py-14 md:py-20">
+      <section className="py-7 md:py-10">
         <Reveal variant="up" className="container-prose text-center" as="div">
           <span className="eyebrow">{content.philosophy.eyebrow}</span>
           <div className="mt-5">
@@ -159,11 +159,15 @@ export default async function HomePage() {
       </section>
 
       {/* 3 PRESTATIONS */}
-      <section className="py-14 md:py-20 bg-white border-y border-sand-200">
+      <section className="relative isolate py-7 md:py-10 bg-white border-y border-sand-200">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute top-1/3 right-0 md:right-[6%] h-72 w-72 -translate-y-1/2 rounded-full bg-accent-300/50 halo animate-float-slow -z-10"
+        />
         <div className="container-full">
           <Reveal
             variant="up"
-            className="text-center max-w-2xl mx-auto mb-10 md:mb-12"
+            className="text-center max-w-2xl mx-auto mb-7 md:mb-8"
             as="div"
           >
             <span className="eyebrow">{content.services.eyebrow}</span>
@@ -214,8 +218,8 @@ export default async function HomePage() {
       </section>
 
       {/* APPROCHE */}
-      <section className="py-14 md:py-20">
-        <div className="container-full grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <section className="py-7 md:py-10">
+        <div className="container-full grid lg:grid-cols-2 gap-6 lg:gap-10 items-center">
           <Reveal variant="left" className="order-2 lg:order-1 relative" as="div">
             <div className="absolute -inset-4 bg-bo/20 rounded-[2.5rem] blur-2xl animate-pulse-soft" />
             <Image
@@ -233,7 +237,7 @@ export default async function HomePage() {
             </h2>
             <p className="body-text mt-5">{content.approach.paragraph1}</p>
             <p className="body-text mt-3">{content.approach.paragraph2}</p>
-            <div className="mt-8">
+            <div className="mt-6">
               <Link href="/coach" className="btn-secondary">
                 {content.approach.cta}
               </Link>
@@ -243,7 +247,7 @@ export default async function HomePage() {
       </section>
 
       {/* CITATION */}
-      <section className="py-12 md:py-16 bg-accent-100/40">
+      <section className="py-5 md:py-7 bg-accent-100/40">
         <Reveal variant="scale" className="container-prose" as="div">
           <QuoteBlock
             quote={content.citation.quote}
@@ -253,9 +257,9 @@ export default async function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-14 md:py-20">
+      <section className="py-7 md:py-10">
         <Reveal variant="up" className="container-prose" as="div">
-          <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-bo via-bo to-bo-dark px-8 md:px-14 py-12 md:py-16 text-center text-sand-50 shadow-xl bg-[length:200%_200%] animate-gradient-shift">
+          <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-bo via-bo to-bo-dark px-8 md:px-14 py-8 md:py-12 text-center text-sand-50 shadow-xl bg-[length:200%_200%] animate-gradient-shift">
             <div
               aria-hidden
               className="pointer-events-none absolute -top-10 -right-10 h-48 w-48 rounded-full bg-joy-400/45 halo animate-float"
@@ -265,17 +269,17 @@ export default async function HomePage() {
               className="pointer-events-none absolute -bottom-12 -left-12 h-56 w-56 rounded-full bg-accent-400/35 halo animate-float-slow"
             />
             <h2 className="relative font-sans text-3xl md:text-4xl font-semibold leading-tight tracking-tight text-balance text-sand-50">
-              {content.finalCta.title}
+              Prêt à faire le premier pas ?
             </h2>
             <p className="relative mt-4 text-sand-50/90 max-w-xl mx-auto text-balance">
-              {content.finalCta.description}
+              Parlons-en ensemble pour construire une intervention sur mesure.
             </p>
-            <div className="relative mt-8">
+            <div className="relative mt-6">
               <Link
                 href="/contact"
                 className="shine-on-hover inline-flex items-center gap-2 rounded-full bg-sand-50 px-8 py-4 text-sm font-medium text-bo-dark transition-all hover:bg-white hover:-translate-y-0.5 shadow-md"
               >
-                {content.finalCta.button}
+                Me contacter
                 <svg
                   width="16"
                   height="16"

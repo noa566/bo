@@ -25,11 +25,11 @@ export default async function CoachingPage() {
         subtitle={c.header.subtitle}
       />
 
-      <section className="py-12 md:py-16">
+      <section className="py-8 md:py-12">
         <div className="container-full">
           <p className="lead text-center max-w-3xl mx-auto">{c.intro}</p>
 
-          <div className="mt-10 grid md:grid-cols-2 gap-6">
+          <div className="mt-7 grid md:grid-cols-2 gap-6">
             {c.orientations.map((o, idx) => {
               const numberColors = [
                 "text-bo",
@@ -97,11 +97,11 @@ export default async function CoachingPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-12 md:py-16">
+      <section className="py-8 md:py-12">
         <div className="container-prose text-center relative">
           <h2 className="h-section text-balance">{c.cta.title}</h2>
           <p className="lead mt-4 text-balance">{c.cta.lead}</p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
+          <div className="mt-6 flex flex-wrap justify-center gap-4">
             <Link href="/contact" className="btn-primary">
               {c.cta.primaryButton}
             </Link>

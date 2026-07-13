@@ -36,7 +36,9 @@ export default function QuoteBlock({
     return (
       <figure className="quote-block">
         <blockquote className="font-serif text-base italic leading-relaxed">
-          « {quote} »
+          «{"\u202F"}
+          {quote}
+          {"\u202F"}»
         </blockquote>
         <figcaption className="quote-author">{author}</figcaption>
       </figure>
@@ -44,16 +46,20 @@ export default function QuoteBlock({
   }
 
   return (
-    <figure className="text-center">
+    <figure className="relative flex flex-col items-center justify-center text-center min-h-[5.5rem] md:min-h-[6.5rem]">
       {showIcon && (
-        <QuoteIcon className="mx-auto text-accent-400 mb-4 animate-float-slow" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2">
+          <QuoteIcon className="text-accent-400 animate-float-fast" />
+        </div>
       )}
-      <AutoFitQuote text={quote} />
-      {author && (
-        <figcaption className="mt-4 text-sm text-accent-600 italic">
-          {author}
-        </figcaption>
-      )}
+      <div className={showIcon ? "pt-8" : undefined}>
+        <AutoFitQuote text={quote} />
+        {author && (
+          <figcaption className="mt-2 text-sm text-accent-600 italic">
+            {author}
+          </figcaption>
+        )}
+      </div>
     </figure>
   );
 }

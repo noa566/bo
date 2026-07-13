@@ -8,11 +8,13 @@ export default function SiteLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="relative flex flex-col flex-1 overflow-x-clip">
-      <PageHalos />
+    <>
       <Navbar />
-      <main className="relative flex-1">{children}</main>
-      <Footer />
-    </div>
+      <div className="relative flex flex-col flex-1 overflow-x-clip">
+        <PageHalos />
+        <main className="relative flex-1">{children}</main>
+        <Footer />
+      </div>
+    </>
   );
 }

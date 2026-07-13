@@ -22,16 +22,16 @@ export default async function ContactPage() {
         subtitle={c.header.subtitle}
       />
 
-      <section className="py-12 md:py-16">
-        <div className="container-full grid lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-16 items-start">
+      <section className="py-8 md:py-12">
+        <div className="container-full grid lg:grid-cols-[1.4fr_1fr] gap-6 lg:gap-10 items-start">
           <div className="order-2 lg:order-1">
-            <h2 className="h-section text-balance text-joy-500">Formulaire de contact</h2>
+            <h2 className="h-section text-balance text-bo-dark">Formulaire de contact</h2>
             <div className="mt-7">
               <ContactForm />
             </div>
           </div>
 
-          <aside className="order-1 lg:order-2 lg:sticky lg:top-32 space-y-6">
+          <aside className="order-1 lg:order-2 lg:sticky lg:top-32 space-y-4">
             <div className="rounded-3xl bg-gradient-to-br from-bo to-bo-dark p-7 md:p-8 text-sand-50">
               <h3 className="font-sans text-xl md:text-2xl font-semibold tracking-tight mb-5 text-sand-50">{c.details.title}</h3>
 

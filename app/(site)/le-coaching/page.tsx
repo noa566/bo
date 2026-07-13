@@ -26,9 +26,9 @@ export default async function LeCoachingPage() {
         subtitle={c.header.subtitle}
       />
 
-      <section className="py-8 md:py-10">
+      <section className="py-6 md:py-8">
         <div className="container-prose">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-10 items-center">
             <Reveal variant="left">
               <span className="eyebrow">{c.whatIs.eyebrow}</span>
               <p className="body-text mt-3">{c.whatIs.text}</p>
@@ -49,7 +49,7 @@ export default async function LeCoachingPage() {
         </div>
       </section>
 
-      <section className="py-10 md:py-12">
+      <section className="py-7 md:py-9">
         <div className="container-prose">
           <div className="text-center mb-8">
             <span className="eyebrow">{c.domains.eyebrow}</span>
@@ -85,7 +85,7 @@ export default async function LeCoachingPage() {
         </div>
       </section>
 
-      <section className="py-8 md:py-10">
+      <section className="py-6 md:py-8">
         <div className="container-prose">
           <span className="eyebrow">{c.deontology.eyebrow}</span>
           <h2 className="h-sub mt-3 text-balance">{c.deontology.headline}</h2>
@@ -93,7 +93,7 @@ export default async function LeCoachingPage() {
         </div>
       </section>
 
-      <section className="relative isolate py-14 md:py-20 bg-sand-100/60">
+      <section className="relative isolate py-7 md:py-10 bg-sand-100/60">
         <div
           aria-hidden
           className="pointer-events-none absolute top-1/3 left-0 md:left-[8%] h-72 w-72 -translate-y-1/2 rounded-full bg-accent-300/50 halo animate-float-slow -z-10"
@@ -102,7 +102,7 @@ export default async function LeCoachingPage() {
           <span className="eyebrow">{c.process.eyebrow}</span>
           <h2 className="h-section mt-3 text-balance">{c.process.title}</h2>
 
-          <ol className="mt-6 relative space-y-6">
+          <ol className="mt-6 relative space-y-4">
             <div className="absolute left-[15px] top-2 bottom-2 w-px bg-accent-200 hidden md:block" />
 
             {c.process.steps.map((step, i) => {
@@ -135,18 +135,18 @@ export default async function LeCoachingPage() {
         </div>
       </section>
 
-      <section className="py-10 md:py-14 bg-accent-100/40">
+      <section className="py-5 md:py-7 bg-accent-100/40">
         <div className="container-prose">
           <QuoteBlock quote={c.quote.text} author={c.quote.author} />
         </div>
       </section>
 
-      <section className="py-10 md:py-12">
+      <section className="py-7 md:py-9">
         <div className="container-prose">
           <div className="text-center">
             <h2 className="h-section text-balance">{c.cta.title}</h2>
             <p className="lead mt-4">{c.cta.lead}</p>
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <div className="mt-6 flex flex-wrap justify-center gap-4">
               <Link href="/contact" className="btn-primary">
                 {c.cta.primaryButton}
               </Link>

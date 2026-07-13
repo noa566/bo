@@ -230,8 +230,8 @@ export const defaultHomeContent: HomeContent = {
   finalCta: {
     title: "Prêt à faire le premier pas ?",
     description:
-      "La séance « fondation » est sans engagement. C'est l'occasion de faire connaissance, de clarifier vos attentes et de répondre à vos questions.",
-    button: "Réserver ma séance découverte",
+      "Parlons-en ensemble pour construire une intervention sur mesure.",
+    button: "Me contacter",
   },
 };
 
