@@ -235,7 +235,9 @@ export default async function HomePage() {
             <h2 className="h-section mt-3 text-balance">
               {content.approach.title}
             </h2>
-            <p className="body-text mt-5">{content.approach.paragraph1}</p>
+            <p className="body-text mt-5 whitespace-pre-line">
+              {"Le coach questionne, écoute, relance. Je n'apporte pas les réponses, je vous accompagne pour faire émerger les vôtres.\nLe formateur structure les échanges, partage des méthodes et des outils concrets pour développer des compétences.\nNi thérapeute, ni conseiller, je suis un partenaire engagé à vos côtés : vous donnez la direction, et nous explorons ensemble les chemins qui mènent à vos objectifs pour passer à l'action."}
+            </p>
             <p className="body-text mt-3">{content.approach.paragraph2}</p>
             <div className="mt-6">
               <Link href="/coach" className="btn-secondary">

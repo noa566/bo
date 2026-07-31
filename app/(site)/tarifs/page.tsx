@@ -15,7 +15,6 @@ export const metadata: Metadata = {
 
 export default async function TarifsPage() {
   const c = await getPageContent("tarifs");
-  const contact = await getPageContent("contact");
 
   return (
     <>
@@ -111,9 +110,13 @@ export default async function TarifsPage() {
             >
               <CardTopBar index={1} />
               <h3 className="font-sans text-lg md:text-xl font-semibold tracking-tight mb-3">
-                {c.founding.title}
+                Séance fondation
               </h3>
-              <p className="body-text">{c.founding.text}</p>
+              <p className="body-text">
+                Je vous propose d&apos;abord une rencontre d&apos;une heure sans
+                engagement pour faire connaissance, clarifier vos attentes et
+                répondre à vos questions.
+              </p>
             </Reveal>
 
             <Reveal
@@ -124,10 +127,16 @@ export default async function TarifsPage() {
             >
               <CardTopBar index={2} />
               <h3 className="font-sans text-lg md:text-xl font-semibold tracking-tight mb-3">
-                {contact.workInfo.title}
+                Comment je travaille
               </h3>
               <ul className="space-y-2 text-sm text-ink-soft leading-relaxed">
-                {contact.workInfo.items.map((item, i) => (
+                {[
+                  "Réponse sous 48h ouvrées",
+                  "Contact téléphonique ou par email",
+                  "Première séance fondation sans engagement",
+                  "Confidentialité garantie",
+                  "En présentiel ou en visio",
+                ].map((item, i) => (
                   <li key={i}>· {item}</li>
                 ))}
               </ul>

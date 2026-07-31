@@ -217,7 +217,7 @@ export const defaultHomeContent: HomeContent = {
     eyebrow: "Mon approche",
     title: "Un partenaire engagé à vos côtés",
     paragraph1:
-      "Le coach questionne, écoute, relance. Je n'apporte pas les réponses, je vous accompagne pour faire émerger les vôtres. Ni thérapeute, ni conseiller, je suis un partenaire engagé à vos côtés : vous donnez la direction, et nous explorons ensemble les chemins qui mènent à vos objectifs pour passer à l'action.",
+      "Le coach questionne, écoute, relance. Je n'apporte pas les réponses, je vous accompagne pour faire émerger les vôtres.\nLe formateur structure les échanges, partage des méthodes et des outils concrets pour développer des compétences.\nNi thérapeute, ni conseiller, je suis un partenaire engagé à vos côtés : vous donnez la direction, et nous explorons ensemble les chemins qui mènent à vos objectifs pour passer à l'action.",
     paragraph2:
       "La déontologie est au cœur de mon accompagnement : confidentialité et respect des personnes guident chaque échange.",
     cta: "Découvrir mon parcours",
