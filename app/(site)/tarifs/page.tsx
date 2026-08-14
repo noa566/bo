@@ -85,43 +85,14 @@ export default async function TarifsPage() {
                   ))}
                 </ul>
 
-                <div className="mt-7">
-                  <Link
-                    href="/contact"
-                    className={
-                      p.highlight
-                        ? "inline-flex w-full items-center justify-center rounded-full bg-sand-50 px-6 py-3 text-sm font-medium text-bo-dark transition-all hover:bg-white"
-                        : "inline-flex w-full items-center justify-center rounded-full border border-bo px-6 py-3 text-sm font-medium text-bo-dark transition-all hover:bg-bo hover:text-white"
-                    }
-                  >
-                    {p.cta}
-                  </Link>
-                </div>
               </article>
               </Reveal>
             ))}
           </div>
 
-          <div className="mt-7 grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="mt-7 grid gap-6 max-w-2xl mx-auto">
             <Reveal
               variant="up"
-              className="relative overflow-hidden rounded-2xl bg-accent-100/50 border border-accent-200 p-7 text-center transition-all hover:shadow-lg hover:border-accent-300 h-full"
-              as="div"
-            >
-              <CardTopBar index={1} />
-              <h3 className="font-sans text-lg md:text-xl font-semibold tracking-tight mb-3">
-                Séance fondation
-              </h3>
-              <p className="body-text">
-                Je vous propose d&apos;abord une rencontre d&apos;une heure sans
-                engagement pour faire connaissance, clarifier vos attentes et
-                répondre à vos questions.
-              </p>
-            </Reveal>
-
-            <Reveal
-              variant="up"
-              delay={150}
               className="relative overflow-hidden rounded-2xl bg-accent-100/50 border border-accent-200 p-7 transition-all hover:shadow-lg hover:border-accent-300 h-full"
               as="div"
             >
@@ -141,6 +112,18 @@ export default async function TarifsPage() {
                 ))}
               </ul>
             </Reveal>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-8 md:py-12">
+        <div className="container-prose text-center">
+          <h2 className="h-section text-balance">Envie d&apos;échanger autour d&apos;une idée&nbsp;?</h2>
+          <p className="lead mt-4">Construisons ensemble un projet qui vous ressemble</p>
+          <div className="mt-6">
+            <Link href="/contact" className="btn-primary">
+              Me contacter
+            </Link>
           </div>
         </div>
       </section>

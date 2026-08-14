@@ -19,7 +19,7 @@ export default async function ContactPage() {
       <PageHeader
         eyebrow={c.header.eyebrow}
         title={c.header.title}
-        subtitle={c.header.subtitle}
+        subtitle="Construisons ensemble un projet qui vous ressemble"
       />
 
       <section className="py-8 md:py-12">

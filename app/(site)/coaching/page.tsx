@@ -100,13 +100,10 @@ export default async function CoachingPage() {
       <section className="py-8 md:py-12">
         <div className="container-prose text-center relative">
           <h2 className="h-section text-balance">{c.cta.title}</h2>
-          <p className="lead mt-4 text-balance">{c.cta.lead}</p>
+          <p className="lead mt-4 text-balance">Cheminons ensemble vers le projet qui vous anime</p>
           <div className="mt-6 flex flex-wrap justify-center gap-4">
             <Link href="/contact" className="btn-primary">
-              {c.cta.primaryButton}
-            </Link>
-            <Link href="/tarifs" className="btn-secondary">
-              {c.cta.secondaryButton}
+              Me contacter
             </Link>
           </div>
         </div>

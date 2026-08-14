@@ -3,14 +3,13 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Bo Coaching — Coaching mental et formation à Genève",
+    default: "Bo Coaching — Coaching et formation à Genève",
     template: "%s | Bo Coaching",
   },
   description:
     "Boris Lazzarotto, coach professionnel et formateur à Genève. Coaching personnel, coaching d'équipe et formations pour révéler votre potentiel.",
   keywords: [
     "coaching",
-    "coach mental",
     "coaching Genève",
     "coaching d'équipe",
     "formation",
@@ -19,7 +18,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Boris Lazzarotto" }],
   openGraph: {
-    title: "Bo Coaching — Coaching mental et formation à Genève",
+    title: "Bo Coaching — Coaching et formation à Genève",
     description:
       "Coaching personnel et d'équipe, formations pour révéler votre potentiel.",
     locale: "fr_CH",

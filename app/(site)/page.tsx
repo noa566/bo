@@ -93,12 +93,10 @@ export default async function HomePage() {
           <div className="animate-fade-in-up">
             <span className="eyebrow mb-3">{content.hero.eyebrow}</span>
             <h1 className="h-display not-italic mt-3 text-balance">
-              {content.hero.titleStart}{" "}
+              Réaliser votre{" "}
               <span className="whitespace-nowrap">
-                <span style={{ color: "#E91E9A" }}>
-                  {content.hero.titleAccent}
-                </span>
-                {content.hero.titleEnd}
+                <span style={{ color: "#E91E9A" }}>potentiel</span>
+                , pas après pas.
               </span>
             </h1>
             <p className="lead mt-5 max-w-xl text-balance">
@@ -151,7 +149,7 @@ export default async function HomePage() {
           <span className="eyebrow">{content.philosophy.eyebrow}</span>
           <div className="mt-5">
             <QuoteBlock
-              quote={content.philosophy.quote.replace(/^«\s*|\s*»$/g, "")}
+              quote="Nous avons toutes et tous les capacités pour réaliser notre potentiel, et vivre aligné avec nos aspirations profondes."
               author=""
             />
           </div>

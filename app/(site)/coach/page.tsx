@@ -22,7 +22,7 @@ export default async function CoachPage() {
       <PageHeader
         eyebrow={c.header.eyebrow}
         title={c.header.title}
-        subtitle={c.header.subtitle}
+        subtitle="Inspiré par la rencontre, la transmission et la transformation"
       />
 
       <section className="py-8 md:py-12">
@@ -115,11 +115,11 @@ export default async function CoachPage() {
       {/* CTA */}
       <section className="py-8 md:py-12">
         <div className="container-prose text-center">
-          <h2 className="h-section text-balance">{c.cta.title}</h2>
+          <h2 className="h-section text-balance">Envie d&apos;échanger autour d&apos;une idée&nbsp;?</h2>
           <p className="lead mt-4">{c.cta.lead}</p>
           <div className="mt-6">
             <Link href="/contact" className="btn-primary">
-              {c.cta.button}
+              Me contacter
             </Link>
           </div>
         </div>

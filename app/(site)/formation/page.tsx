@@ -139,14 +139,11 @@ export default async function FormationPage() {
 
       <section className="py-8 md:py-12">
         <div className="container-prose text-center">
-          <h2 className="h-section text-balance">{c.cta.title}</h2>
-          <p className="lead mt-4">{c.cta.lead}</p>
+          <h2 className="h-section text-balance">Envie d&apos;échanger sur vos objectifs&nbsp;?</h2>
+          <p className="lead mt-4">Construisons ensemble une intervention sur mesure</p>
           <div className="mt-6 flex flex-wrap justify-center gap-4">
             <Link href="/contact" className="btn-primary">
-              {c.cta.primaryButton}
-            </Link>
-            <Link href="/tarifs" className="btn-secondary">
-              {c.cta.secondaryButton}
+              Me contacter
             </Link>
           </div>
         </div>

@@ -56,7 +56,14 @@ export default async function LeCoachingPage() {
             <h2 className="h-section mt-3 text-balance">{c.domains.title}</h2>
           </div>
           <ul className="grid md:grid-cols-2 gap-4">
-            {c.domains.items.map((d, i) => {
+            {c.domains.items.map((item, i) => {
+              const d =
+                i === 5
+                  ? {
+                      title: "Cultiver son jardin",
+                      text: "Quand nos ressources ont besoin d'être nourries pour fleurir.",
+                    }
+                  : item;
               const colorIdx = i === 2 ? 3 : i === 3 ? 2 : i;
               return (
               <Reveal key={i} variant="up" delay={(i % 2) * 100}>
@@ -144,14 +151,11 @@ export default async function LeCoachingPage() {
       <section className="py-7 md:py-9">
         <div className="container-prose">
           <div className="text-center">
-            <h2 className="h-section text-balance">{c.cta.title}</h2>
-            <p className="lead mt-4">{c.cta.lead}</p>
+            <h2 className="h-section text-balance">Envie d&apos;échanger autour d&apos;une idée&nbsp;?</h2>
+            <p className="lead mt-4">Donnons vie ensemble à un projet qui vous ressemble</p>
             <div className="mt-6 flex flex-wrap justify-center gap-4">
               <Link href="/contact" className="btn-primary">
-                {c.cta.primaryButton}
-              </Link>
-              <Link href="/tarifs" className="btn-secondary">
-                {c.cta.secondaryButton}
+                Me contacter
               </Link>
             </div>
           </div>

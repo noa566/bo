@@ -169,7 +169,7 @@ export type ContactContent = {
 export const defaultHomeContent: HomeContent = {
   hero: {
     eyebrow: "COachiNg et FORMATiON à Genève",
-    titleStart: "Révéler votre",
+    titleStart: "Réaliser votre",
     titleAccent: "potentiel",
     titleEnd: ", pas après pas.",
     lead: "Coaching personnel, coaching d'équipe et formation pour vous accompagner dans vos transitions, clarifier vos priorités et construire l'avenir qui vous ressemble.",
@@ -184,7 +184,7 @@ export const defaultHomeContent: HomeContent = {
   philosophy: {
     eyebrow: "Ma conviction",
     quote:
-      "« Nous avons toutes et tous les capacités pour révéler notre potentiel, et vivre aligné avec nos aspirations profondes. »",
+      "« Nous avons toutes et tous les capacités pour réaliser notre potentiel, et vivre aligné avec nos aspirations profondes. »",
     author: "Boris Lazzarotto",
   },
   services: {
@@ -252,7 +252,7 @@ export const defaultCoachContent: CoachContent = {
   },
   conviction: {
     eyebrow: "Ma conviction",
-    text: "Nous avons toutes et tous les capacités pour révéler notre potentiel, et vivre aligné avec nos aspirations profondes.",
+    text: "Nous avons toutes et tous les capacités pour réaliser notre potentiel, et vivre aligné avec nos aspirations profondes.",
   },
   engagement: {
     eyebrow: "Mon engagement",
@@ -462,8 +462,8 @@ export const defaultLeCoachingContent: LeCoachingContent = {
         text: "Quand notre petit ange collabore avec le diablotin.",
       },
       {
-        title: "Cultiver la confiance en soi",
-        text: "Quand nos ressources intérieures ne demandent qu'à être révélées.",
+        title: "Cultiver son jardin",
+        text: "Quand nos ressources ont besoin d'être nourries pour fleurir.",
       },
     ],
   },
