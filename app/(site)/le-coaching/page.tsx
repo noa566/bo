@@ -55,7 +55,7 @@ export default async function LeCoachingPage() {
             <span className="eyebrow">{c.domains.eyebrow}</span>
             <h2 className="h-section mt-3 text-balance">{c.domains.title}</h2>
           </div>
-          <ul className="grid md:grid-cols-2 gap-4">
+          <ul className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-3 md:grid md:grid-cols-2 md:overflow-visible md:pb-0">
             {c.domains.items.map((item, i) => {
               const d =
                 i === 5
@@ -66,7 +66,7 @@ export default async function LeCoachingPage() {
                   : item;
               const colorIdx = i === 2 ? 3 : i === 3 ? 2 : i;
               return (
-              <Reveal key={i} variant="up" delay={(i % 2) * 100}>
+              <Reveal key={i} variant="up" delay={(i % 2) * 100} className="shrink-0 basis-[78%] snap-start md:basis-auto">
               <li
                 className="relative overflow-hidden rounded-2xl border border-sand-200 bg-sand-50 p-6 transition-all duration-300 hover:border-bo/40 hover:shadow-lg hover:-translate-y-0.5 h-full"
               >
