@@ -31,12 +31,6 @@ export default async function CoachingPage() {
 
           <div className="mt-7 grid md:grid-cols-2 gap-6">
             {c.orientations.map((o, idx) => {
-              const numberColors = [
-                "text-bo",
-                "text-accent-500",
-                "text-joy-500",
-                "text-sage-600",
-              ];
               const borderHovers = [
                 "hover:border-bo/40",
                 "hover:border-accent-300",
@@ -50,16 +44,6 @@ export default async function CoachingPage() {
                 }`}
               >
                 <CardTopBar index={idx} />
-                <div className="flex items-baseline gap-4 mb-2">
-                  <span
-                    className={`font-serif text-3xl ${
-                      numberColors[idx % numberColors.length]
-                    }`}
-                  >
-                    {o.number}
-                  </span>
-                  <div className="h-px flex-1 bg-sand-200" />
-                </div>
                 <h2 className="font-sans text-2xl md:text-[26px] font-semibold tracking-tight mt-2 mb-2 leading-snug">
                   {o.title}
                 </h2>

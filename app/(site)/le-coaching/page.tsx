@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import QuoteBlock from "@/components/QuoteBlock";
 import Reveal from "@/components/Reveal";
-import CardTopBar, { BAR_NUMBER_COLORS } from "@/components/CardTopBar";
+import CardTopBar from "@/components/CardTopBar";
 import { getPageContent } from "@/lib/content";
 
 export const dynamic = "force-dynamic";
@@ -71,13 +71,6 @@ export default async function LeCoachingPage() {
                 className="relative overflow-hidden rounded-2xl border border-sand-200 bg-sand-50 p-6 transition-all duration-300 hover:border-bo/40 hover:shadow-lg hover:-translate-y-0.5 h-full"
               >
                 <CardTopBar index={colorIdx} />
-                <span
-                  className={`font-serif text-base ${
-                    BAR_NUMBER_COLORS[colorIdx % BAR_NUMBER_COLORS.length]
-                  }`}
-                >
-                  0{i + 1}
-                </span>
                 <h3 className="font-sans text-base md:text-lg font-semibold tracking-tight mt-2 mb-2">
                   {d.title}
                 </h3>
